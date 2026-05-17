@@ -1,0 +1,13 @@
+@use 'tokens' as *;
+
+:host {
+  padding: var(--chunk-panel-padding);
+}
+
+:host([data-padding='sm']) {
+  --chunk-panel-padding: #{$chunk-padding-sm};
+}
+
+:host([data-padding='lg']) {
+  --chunk-panel-padding: #{$chunk-padding-lg};
+}

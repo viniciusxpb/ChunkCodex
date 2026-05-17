@@ -1,0 +1,13 @@
+@use 'colors' as *;
+
+$chunk-shadow-sm: 2px 2px 0 $chunk-color-shadow;
+$chunk-shadow-md: 4px 4px 0 $chunk-color-shadow;
+$chunk-shadow-lg: 6px 6px 0 $chunk-color-shadow;
+
+$chunk-padding-sm: 14px;
+$chunk-padding-md: 22px;
+$chunk-padding-lg: 32px;
+
+$chunk-border-sm: 3px solid $chunk-color-shadow;
+$chunk-border-md: 3px solid $chunk-color-shadow;
+$chunk-border-lg: 3px solid $chunk-color-shadow;

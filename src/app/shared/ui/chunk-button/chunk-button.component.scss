@@ -1,0 +1,129 @@
+@use 'sass:color';
+@use 'tokens' as *;
+
+$chunk-button-focus: $chunk-color-diamond;
+
+:host {
+  --chunk-button-tone-bg: #{$chunk-color-grass};
+  --chunk-button-tone-bg-hover: #{$chunk-color-grass-dark};
+  --chunk-button-tone-bg-active: #{$chunk-color-grass-dark};
+  --chunk-button-tone-accent: #{$chunk-color-grass-dark};
+  --chunk-button-tone-text: #{$chunk-color-white};
+
+  --chunk-button-bg: var(--chunk-button-tone-bg);
+  --chunk-button-bg-hover: var(--chunk-button-tone-bg-hover);
+  --chunk-button-bg-active: var(--chunk-button-tone-bg-active);
+  --chunk-button-border: #{$chunk-color-ink};
+  --chunk-button-text: var(--chunk-button-tone-text);
+  --chunk-button-shadow: #{$chunk-shadow-md};
+  --chunk-button-shadow-active: #{$chunk-shadow-sm};
+  --chunk-button-active-offset: 2px;
+  --chunk-button-min-height: 2.5rem;
+  --chunk-button-padding-block: 0.625rem;
+  --chunk-button-padding-inline: 1rem;
+  --chunk-button-font-size: 1rem;
+
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: var(--chunk-button-min-height);
+  max-width: 100%;
+  padding: var(--chunk-button-padding-block) var(--chunk-button-padding-inline);
+  border: 1px solid var(--chunk-button-border);
+  background: var(--chunk-button-bg);
+  color: var(--chunk-button-text);
+  font: inherit;
+  font-size: var(--chunk-button-font-size);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: var(--chunk-button-shadow);
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    transform 80ms ease;
+}
+
+:host(:hover) {
+  background: var(--chunk-button-bg-hover);
+}
+
+:host(:active) {
+  background: var(--chunk-button-bg-active);
+  box-shadow: var(--chunk-button-shadow-active);
+  transform: translate(var(--chunk-button-active-offset), var(--chunk-button-active-offset));
+}
+
+:host(:focus) {
+  outline: none;
+}
+
+:host(:focus-visible) {
+  outline: 3px solid color.change($chunk-button-focus, $alpha: 0.45);
+  outline-offset: 2px;
+}
+
+:host([data-variant='ghost']) {
+  --chunk-button-bg: transparent;
+  --chunk-button-bg-hover: #{$chunk-color-bg-soft};
+  --chunk-button-bg-active: #{$chunk-color-bg-grid};
+  --chunk-button-border: var(--chunk-button-tone-accent);
+  --chunk-button-text: var(--chunk-button-tone-accent);
+  --chunk-button-shadow: #{$chunk-shadow-sm};
+  --chunk-button-shadow-active: none;
+}
+
+:host([data-variant='outline']) {
+  --chunk-button-bg: #{$chunk-color-bg-paper};
+  --chunk-button-bg-hover: #{$chunk-color-bg-soft};
+  --chunk-button-bg-active: #{$chunk-color-bg-grid};
+  --chunk-button-border: var(--chunk-button-tone-accent);
+  --chunk-button-text: var(--chunk-button-tone-accent);
+}
+
+:host([data-tone='lapis']) {
+  --chunk-button-tone-bg: #{$chunk-color-lapis};
+  --chunk-button-tone-bg-hover: #{$chunk-color-lapis-light};
+  --chunk-button-tone-bg-active: #{$chunk-color-lapis};
+  --chunk-button-tone-accent: #{$chunk-color-lapis};
+  --chunk-button-tone-text: #{$chunk-color-white};
+}
+
+:host([data-tone='danger']) {
+  --chunk-button-tone-bg: #{$chunk-color-redstone};
+  --chunk-button-tone-bg-hover: #{$chunk-color-ink-2};
+  --chunk-button-tone-bg-active: #{$chunk-color-redstone};
+  --chunk-button-tone-accent: #{$chunk-color-redstone};
+  --chunk-button-tone-text: #{$chunk-color-white};
+}
+
+:host([data-size='sm']) {
+  --chunk-button-min-height: 1.75rem;
+  --chunk-button-padding-block: 0.3125rem;
+  --chunk-button-padding-inline: 0.625rem;
+  --chunk-button-font-size: 0.75rem;
+  --chunk-button-shadow: #{$chunk-shadow-sm};
+  --chunk-button-shadow-active: none;
+  --chunk-button-active-offset: 1px;
+}
+
+:host([data-disabled]) {
+  --chunk-button-bg: #{$chunk-color-bg-grid};
+  --chunk-button-bg-hover: #{$chunk-color-bg-grid};
+  --chunk-button-bg-active: #{$chunk-color-bg-grid};
+  --chunk-button-border: #{$chunk-color-ink};
+  --chunk-button-text: #{$chunk-color-ink-3};
+  --chunk-button-shadow: none;
+  --chunk-button-shadow-active: none;
+
+  cursor: not-allowed;
+  transform: none;
+}

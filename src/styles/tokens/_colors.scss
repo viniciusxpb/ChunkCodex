@@ -1,0 +1,58 @@
+$chunk-color-bg: #ece2c6 !default;
+$chunk-color-bg-soft: #ddd0a8 !default;
+$chunk-color-bg-paper: #f8f3e0 !default;
+$chunk-color-bg-grid: #c4b58c !default;
+$chunk-color-ink: #1d1610 !default;
+$chunk-color-ink-2: #4a3b26 !default;
+$chunk-color-ink-3: #8a7551 !default;
+$chunk-color-line-soft: #b4a378 !default;
+$chunk-color-white: #FFFFFF !default;
+
+$chunk-color-grass: #6cc24a !default;
+$chunk-color-grass-dark: #3d7a2a !default;
+$chunk-color-gold: #e0a020 !default;
+$chunk-color-redstone: #c0322d !default;
+$chunk-color-lapis: #2a4fc6 !default;
+$chunk-color-lapis-light: #3e60d4 !default;
+$chunk-color-diamond: #4dd4d4 !default;
+$chunk-color-dirt: #8b6231 !default;
+$chunk-color-xp: #8be030 !default;
+
+$chunk-color-shadow: #2d2418 !default;
+
+$chunk-color-background: $chunk-color-bg !default;
+$chunk-color-surface: $chunk-color-bg-paper !default;
+$chunk-color-surface-muted: $chunk-color-bg-soft !default;
+$chunk-color-border: $chunk-color-ink !default;
+$chunk-color-border-muted: $chunk-color-line-soft !default;
+$chunk-color-well: $chunk-color-bg-grid !default;
+
+$chunk-color-text: $chunk-color-ink !default;
+$chunk-color-text-subtle: $chunk-color-ink-2 !default;
+$chunk-color-text-muted: $chunk-color-ink-3 !default;
+
+$chunk-color-success: $chunk-color-grass !default;
+$chunk-color-info: $chunk-color-diamond !default;
+$chunk-color-danger: $chunk-color-redstone !default;
+$chunk-color-warning: $chunk-color-gold !default;
+$chunk-color-accent: $chunk-color-lapis !default;
+$chunk-color-primary: $chunk-color-grass !default;
+
+$chunk-theme: (
+  bg: $chunk-color-bg,
+  bg-soft: $chunk-color-bg-soft,
+  bg-paper: $chunk-color-bg-paper,
+  bg-grid: $chunk-color-bg-grid,
+  ink: $chunk-color-ink,
+  ink-2: $chunk-color-ink-2,
+  ink-3: $chunk-color-ink-3,
+  line-soft: $chunk-color-line-soft,
+  grass: $chunk-color-grass,
+  grass-dark: $chunk-color-grass-dark,
+  gold: $chunk-color-gold,
+  redstone: $chunk-color-redstone,
+  lapis: $chunk-color-lapis,
+  diamond: $chunk-color-diamond,
+  dirt: $chunk-color-dirt,
+  xp: $chunk-color-xp,
+) !default;

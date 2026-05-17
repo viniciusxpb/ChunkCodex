@@ -1,0 +1,40 @@
+@use 'sass:color';
+@use 'tokens' as *;
+
+$chunk-panel-focus: $chunk-color-diamond;
+
+:host {
+  --chunk-panel-tone-bg: #{$chunk-color-bg-paper};
+  --chunk-panel-tone-bg-hover: #{$chunk-color-grass-dark};
+  --chunk-panel-tone-bg-active: #{$chunk-color-grass-dark};
+  --chunk-panel-tone-accent: #{$chunk-color-grass-dark};
+  --chunk-panel-tone-text: #{$chunk-color-white};
+  --chunk-panel-padding: #{$chunk-padding-md};
+  --chunk-panel-content-border-color: #{$chunk-color-line-soft};
+  --chunk-panel-bg: var(--chunk-panel-tone-bg);
+  --chunk-panel-bg-hover: var(--chunk-panel-tone-bg-hover);
+  --chunk-panel-bg-active: var(--chunk-panel-tone-bg-active);
+  --chunk-panel-border: #{$chunk-color-ink};
+  --chunk-panel-text: var(--chunk-panel-tone-text);
+  --chunk-panel-shadow: #{$chunk-shadow-md};
+  --chunk-panel-shadow-active: #{$chunk-shadow-sm};
+  --chunk-panel-active-offset: 2px;
+  --chunk-panel-min-height: 2.5rem;
+  --chunk-panel-padding-block: 0.625rem;
+  --chunk-panel-padding-inline: 1rem;
+  --chunk-panel-font-size: 1rem;
+  
+
+  display: flex;
+  gap: 16px;
+  flex-flow: wrap;
+  background-color: var(--chunk-panel-tone-bg);
+  border: 2px solid var(--chunk-panel-content-border-color);
+  padding: var(--chunk-panel-padding);
+}
+
+:host(:focus-visible) {
+  outline: 3px solid color.change($chunk-panel-focus, $alpha: 0.45);
+  outline-offset: 2px;
+}
+

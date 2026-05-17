@@ -1,0 +1,24 @@
+@use 'sass:color';
+@use 'tokens' as *;
+
+$chunk-panel-focus: $chunk-color-diamond;
+
+:host {
+  --chunk-panel-title-text: #{$chunk-color-ink-3};
+  color: var(--chunk-panel-title-text);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+:host(::before) {
+    content: "";
+    width: 14px;
+    height: 2px;
+    background: var(--chunk-panel-title-text);
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+

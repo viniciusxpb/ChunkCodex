@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@use './styles/tokens' as *;
+
+body {
+  background: $chunk-color-background;
+  color: $chunk-color-text;
+  font-family: $chunk-font-sans;
+  padding: 2rem;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: $chunk-font-mono;
+}

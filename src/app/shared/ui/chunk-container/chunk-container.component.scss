@@ -1,0 +1,109 @@
+@use 'sass:color';
+@use 'tokens' as *;
+
+$chunk-container-focus: $chunk-color-diamond;
+
+:host {
+  --chunk-container-tone-bg: #{$chunk-color-bg-paper};
+  --chunk-container-tone-bg-hover: #{$chunk-color-grass-dark};
+  --chunk-container-tone-bg-active: #{$chunk-color-grass-dark};
+  --chunk-container-tone-accent: #{$chunk-color-grass-dark};
+  --chunk-container-tone-text: #{$chunk-color-white};
+  --chunk-container-padding: #{$chunk-padding-md};
+  --chunk-container-border: #{$chunk-border-md};
+  --chunk-container-bg: var(--chunk-container-tone-bg);
+  --chunk-container-bg-hover: var(--chunk-container-tone-bg-hover);
+  --chunk-container-bg-active: var(--chunk-container-tone-bg-active);
+  --chunk-container-text: var(--chunk-container-tone-text);
+  --chunk-container-shadow: #{$chunk-shadow-md};
+  --chunk-container-shadow-active: #{$chunk-shadow-sm};
+  --chunk-container-active-offset: 2px;
+  --chunk-container-min-height: 2.5rem;
+  --chunk-container-padding-block: 0.625rem;
+  --chunk-container-padding-inline: 1rem;
+  --chunk-container-font-size: 1rem;
+
+
+  border: var(--chunk-container-border);
+  padding: var(--chunk-container-padding);
+  display: flex;
+  gap: 16px;
+  flex-flow: wrap;
+  background-color: var(--chunk-container-tone-bg);
+  box-shadow: var(--chunk-container-shadow);
+
+}
+
+:host(:hover) {
+  //background: var(--chunk-container-bg-hover);
+}
+
+:host(:active) {
+  // background: var(--chunk-container-bg-active);
+  // box-shadow: var(--chunk-container-shadow-active);
+  // transform: translate(var(--chunk-container-active-offset), var(--chunk-container-active-offset));
+}
+
+:host(:focus) {
+  outline: none;
+}
+
+:host(:focus-visible) {
+  outline: 3px solid color.change($chunk-container-focus, $alpha: 0.45);
+  outline-offset: 2px;
+}
+
+:host([data-padding='sm']) {
+  --chunk-container-padding: #{$chunk-padding-sm};
+}
+
+:host([data-padding='lg']) {
+  --chunk-container-padding: #{$chunk-padding-lg};
+}
+
+:host([data-variant='outline']) {
+  --chunk-container-bg: #{$chunk-color-bg-paper};
+  --chunk-container-bg-hover: #{$chunk-color-bg-soft};
+  --chunk-container-bg-active: #{$chunk-color-bg-grid};
+  --chunk-container-border: var(--chunk-container-tone-accent);
+  --chunk-container-text: var(--chunk-container-tone-accent);
+}
+
+:host([data-tone='lapis']) {
+  --chunk-container-tone-bg: #{$chunk-color-lapis};
+  --chunk-container-tone-bg-hover: #{$chunk-color-lapis-light};
+  --chunk-container-tone-bg-active: #{$chunk-color-lapis};
+  --chunk-container-tone-accent: #{$chunk-color-lapis};
+  --chunk-container-tone-text: #{$chunk-color-white};
+}
+
+:host([data-tone='danger']) {
+  --chunk-container-tone-bg: #{$chunk-color-redstone};
+  --chunk-container-tone-bg-hover: #{$chunk-color-ink-2};
+  --chunk-container-tone-bg-active: #{$chunk-color-redstone};
+  --chunk-container-tone-accent: #{$chunk-color-redstone};
+  --chunk-container-tone-text: #{$chunk-color-white};
+}
+
+:host([data-size='sm']) {
+  --chunk-container-min-height: 1.75rem;
+  --chunk-container-padding-block: 0.3125rem;
+  --chunk-container-padding-inline: 0.625rem;
+  --chunk-container-font-size: 0.75rem;
+  --chunk-container-shadow: #{$chunk-shadow-sm};
+  --chunk-container-shadow-active: none;
+  --chunk-container-active-offset: 1px;
+}
+
+:host([data-disabled]) {
+  --chunk-container-bg: #{$chunk-color-bg-grid};
+  --chunk-container-bg-hover: #{$chunk-color-bg-grid};
+  --chunk-container-bg-active: #{$chunk-color-bg-grid};
+  --chunk-container-border: #{$chunk-color-ink};
+  --chunk-container-text: #{$chunk-color-ink-3};
+  --chunk-container-shadow: none;
+  --chunk-container-shadow-active: none;
+
+  cursor: not-allowed;
+  transform: none;
+}
