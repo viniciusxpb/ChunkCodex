@@ -4,6 +4,14 @@ $chunk-shadow-sm: 2px 2px 0 $chunk-color-shadow;
 $chunk-shadow-md: 4px 4px 0 $chunk-color-shadow;
 $chunk-shadow-lg: 6px 6px 0 $chunk-color-shadow;
 
+$chunk-shadow-focus-sm: 2px 2px 0 $chunk-color-grass-dark;
+$chunk-shadow-focus-md: 4px 4px 0 $chunk-color-grass-dark;
+$chunk-shadow-focus-lg: 6px 6px 0 $chunk-color-grass-dark;
+
+$chunk-shadow-danger-sm: 2px 2px 0 $chunk-color-redstone;
+$chunk-shadow-danger-md: 4px 4px 0 $chunk-color-redstone;
+$chunk-shadow-danger-lg: 6px 6px 0 $chunk-color-redstone;
+
 $chunk-padding-sm: 14px;
 $chunk-padding-md: 22px;
 $chunk-padding-lg: 32px;
@@ -11,3 +19,7 @@ $chunk-padding-lg: 32px;
 $chunk-border-sm: 3px solid $chunk-color-shadow;
 $chunk-border-md: 3px solid $chunk-color-shadow;
 $chunk-border-lg: 3px solid $chunk-color-shadow;
+
+$chunk-border-dashed-sm: 2px dashed $chunk-color-disabled-border;
+$chunk-border-dashed-md: 3px dashed $chunk-color-disabled-border;
+$chunk-border-dashed-lg: 4px dashed $chunk-color-disabled-border;

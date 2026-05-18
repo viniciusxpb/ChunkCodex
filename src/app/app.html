@@ -1,7 +1,30 @@
 <router-outlet />
 <chunk-container>
   <h2>04 · Espaço & Sombra</h2>
-  <p>Espaçamento é múltiplo de <b>4px</b>. Bordas são <b>2px</b> em chips e tags, <b>3px</b> em painéis. Sombras nunca usam blur — apenas offset sólido para reforçar o feel "objeto de plástico empilhado".</p>
+  <p>
+    Espaçamento é múltiplo de <b>4px</b>. Bordas são <b>2px</b> em chips e tags, <b>3px</b> em
+    painéis. Sombras nunca usam blur — apenas offset sólido para reforçar o feel "objeto de plástico
+    empilhado".
+  </p>
+
+  <chunk-panel>
+    <chunk-input>
+      <chunk-input-title>Default · vazio</chunk-input-title>
+      <chunk-input-field placeholder="Ex.: Picareta de Ouro" />
+    </chunk-input>
+
+    <chunk-input disabled>
+      <chunk-input-title>Disabled</chunk-input-title>
+      <chunk-input-field placeholder="Bloqueado" />
+      <chunk-input-hint>não editável · borda tracejada</chunk-input-hint>
+    </chunk-input>
+
+    <chunk-input tone="danger">
+      <chunk-input-title>Error</chunk-input-title>
+      <chunk-input-field placeholder="Ex.: Picareta de Ouro" />
+      <chunk-input-hint tone="danger">⚠ ID já existe na wiki</chunk-input-hint>
+    </chunk-input>
+  </chunk-panel>
 
   <chunk-panel>
     <chunk-panel-title>sm</chunk-panel-title>

@@ -38,6 +38,14 @@ $chunk-color-warning: $chunk-color-gold !default;
 $chunk-color-accent: $chunk-color-lapis !default;
 $chunk-color-primary: $chunk-color-grass !default;
 
+$chunk-color-disabled-bg: $chunk-color-bg-soft !default;
+$chunk-color-disabled-border: $chunk-color-ink !default;
+$chunk-color-disabled-text: $chunk-color-ink-3 !default;
+
+$chunk-color-danger-bg: #efc7c1 !default;
+$chunk-color-danger-border: $chunk-color-redstone !default;
+$chunk-color-danger-text: $chunk-color-redstone !default;
+
 $chunk-theme: (
   bg: $chunk-color-bg,
   bg-soft: $chunk-color-bg-soft,

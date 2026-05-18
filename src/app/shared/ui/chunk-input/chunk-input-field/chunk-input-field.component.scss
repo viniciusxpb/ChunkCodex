@@ -1,0 +1,64 @@
+@use 'tokens' as *;
+
+:host {
+  --chunk-input-field-bg: transparent;
+  --chunk-input-field-bg-hover: #{$chunk-color-white};
+  --chunk-input-field-border: 2px solid #{$chunk-color-ink};
+  --chunk-input-field-text: #{$chunk-color-text};
+  --chunk-input-field-placeholder: #{$chunk-color-text-muted};
+  --chunk-input-field-cursor: text;
+  --chunk-input-field-shadow: none;
+
+  display: block;
+  width: 100%;
+  padding: 9px;
+  border: var(--chunk-input-field-border);
+  background: var(--chunk-input-field-bg);
+  color: var(--chunk-input-field-text);
+  font-size: 14px;
+  cursor: var(--chunk-input-field-cursor);
+  box-shadow: var(--chunk-input-field-shadow);
+  transition:
+    box-shadow 0.08s ease,
+    background 0.08s ease,
+    border-color 0.08s ease;
+
+  input {
+    width: 100%;
+    background: transparent;
+    color: inherit;
+    cursor: inherit;
+
+    &::placeholder {
+      color: var(--chunk-input-field-placeholder);
+    }
+  }
+}
+
+:host(:not([data-disabled]):hover) {
+  --chunk-input-field-bg: var(--chunk-input-field-bg-hover);
+}
+
+:host(:not([data-disabled]):focus-within) {
+  --chunk-input-field-bg: #{$chunk-color-white};
+  --chunk-input-field-border: 2px solid #{$chunk-color-grass-dark};
+  --chunk-input-field-shadow: #{$chunk-shadow-focus-md};
+}
+
+:host([data-tone='danger']:not([data-disabled])) {
+  --chunk-input-field-bg: #{$chunk-color-danger-bg};
+  --chunk-input-field-border: 2px solid #{$chunk-color-danger-border};
+  --chunk-input-field-shadow: #{$chunk-shadow-danger-md};
+}
+
+:host([data-tone='danger']:not([data-disabled]):focus-within) {
+  --chunk-input-field-bg: #{$chunk-color-white};
+}
+
+:host([data-disabled]) {
+  --chunk-input-field-bg: #{$chunk-color-disabled-bg};
+  --chunk-input-field-border: #{$chunk-border-dashed-sm};
+  --chunk-input-field-text: #{$chunk-color-disabled-text};
+  --chunk-input-field-placeholder: #{$chunk-color-disabled-text};
+  --chunk-input-field-cursor: not-allowed;
+}

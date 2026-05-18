@@ -1,0 +1,13 @@
+@use 'tokens' as *;
+
+:host {
+  --chunk-input-hint-text: #{$chunk-color-ink-3};
+
+  display: block;
+  color: var(--chunk-input-hint-text);
+  font-size: 12px;
+}
+
+:host([data-tone='danger']) {
+  --chunk-input-hint-text: #{$chunk-color-danger-text};
+}

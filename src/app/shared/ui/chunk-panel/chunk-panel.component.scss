@@ -2,6 +2,7 @@
 
 :host {
   padding: var(--chunk-panel-padding);
+  width: 100%;
 }
 
 :host([data-padding='sm']) {
