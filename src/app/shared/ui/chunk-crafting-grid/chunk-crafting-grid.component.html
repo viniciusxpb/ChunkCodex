@@ -1,0 +1,9 @@
+<div class="chunk-crafting-grid__matrix" aria-label="Crafting grid">
+  @for (slot of craftingSlots; track slot) {
+    <div class="chunk-crafting-grid__slot chunk-crafting-grid__slot--crafting"></div>
+  }
+
+  @for (slot of resultSlots; track slot) {
+    <div class="chunk-crafting-grid__slot chunk-crafting-grid__slot--result"></div>
+  }
+</div>

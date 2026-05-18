@@ -17,12 +17,11 @@ $chunk-container-focus: $chunk-color-diamond;
   --chunk-container-text: var(--chunk-container-tone-text);
   --chunk-container-shadow: #{$chunk-shadow-md};
   --chunk-container-shadow-active: #{$chunk-shadow-sm};
-  --chunk-container-active-offset: 2px;
-  --chunk-container-min-height: 2.5rem;
-  --chunk-container-padding-block: 0.625rem;
-  --chunk-container-padding-inline: 1rem;
-  --chunk-container-font-size: 1rem;
-
+  --chunk-container-active-offset: #{$chunk-control-active-offset-md};
+  --chunk-container-min-height: #{$chunk-control-min-height-md};
+  --chunk-container-padding-block: #{$chunk-control-padding-block-md};
+  --chunk-container-padding-inline: #{$chunk-control-padding-inline-md};
+  --chunk-container-font-size: #{$chunk-control-font-size-md};
 
   border: var(--chunk-container-border);
   padding: var(--chunk-container-padding);
@@ -31,17 +30,6 @@ $chunk-container-focus: $chunk-color-diamond;
   flex-flow: wrap;
   background-color: var(--chunk-container-tone-bg);
   box-shadow: var(--chunk-container-shadow);
-
-}
-
-:host(:hover) {
-  //background: var(--chunk-container-bg-hover);
-}
-
-:host(:active) {
-  // background: var(--chunk-container-bg-active);
-  // box-shadow: var(--chunk-container-shadow-active);
-  // transform: translate(var(--chunk-container-active-offset), var(--chunk-container-active-offset));
 }
 
 :host(:focus) {
@@ -86,13 +74,13 @@ $chunk-container-focus: $chunk-color-diamond;
 }
 
 :host([data-size='sm']) {
-  --chunk-container-min-height: 1.75rem;
-  --chunk-container-padding-block: 0.3125rem;
-  --chunk-container-padding-inline: 0.625rem;
-  --chunk-container-font-size: 0.75rem;
+  --chunk-container-min-height: #{$chunk-control-min-height-sm};
+  --chunk-container-padding-block: #{$chunk-control-padding-block-sm};
+  --chunk-container-padding-inline: #{$chunk-control-padding-inline-sm};
+  --chunk-container-font-size: #{$chunk-control-font-size-sm};
   --chunk-container-shadow: #{$chunk-shadow-sm};
   --chunk-container-shadow-active: none;
-  --chunk-container-active-offset: 1px;
+  --chunk-container-active-offset: #{$chunk-control-active-offset-sm};
 }
 
 :host([data-disabled]) {

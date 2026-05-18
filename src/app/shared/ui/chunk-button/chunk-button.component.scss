@@ -17,11 +17,11 @@ $chunk-button-focus: $chunk-color-diamond;
   --chunk-button-text: var(--chunk-button-tone-text);
   --chunk-button-shadow: #{$chunk-shadow-md};
   --chunk-button-shadow-active: #{$chunk-shadow-sm};
-  --chunk-button-active-offset: 2px;
-  --chunk-button-min-height: 2.5rem;
-  --chunk-button-padding-block: 0.625rem;
-  --chunk-button-padding-inline: 1rem;
-  --chunk-button-font-size: 1rem;
+  --chunk-button-active-offset: #{$chunk-control-active-offset-md};
+  --chunk-button-min-height: #{$chunk-control-min-height-md};
+  --chunk-button-padding-block: #{$chunk-control-padding-block-md};
+  --chunk-button-padding-inline: #{$chunk-control-padding-inline-md};
+  --chunk-button-font-size: #{$chunk-control-font-size-md};
 
   appearance: none;
   display: inline-flex;
@@ -32,7 +32,7 @@ $chunk-button-focus: $chunk-color-diamond;
   max-width: 100%;
   padding: var(--chunk-button-padding-block) var(--chunk-button-padding-inline);
   border: 1px solid var(--chunk-button-border);
-  background: var(--chunk-button-bg);
+  background-color: var(--chunk-button-bg);
   color: var(--chunk-button-text);
   font: inherit;
   font-size: var(--chunk-button-font-size);
@@ -53,11 +53,11 @@ $chunk-button-focus: $chunk-color-diamond;
 }
 
 :host(:hover) {
-  background: var(--chunk-button-bg-hover);
+  background-color: var(--chunk-button-bg-hover);
 }
 
 :host(:active) {
-  background: var(--chunk-button-bg-active);
+  background-color: var(--chunk-button-bg-active);
   box-shadow: var(--chunk-button-shadow-active);
   transform: translate(var(--chunk-button-active-offset), var(--chunk-button-active-offset));
 }
@@ -106,13 +106,13 @@ $chunk-button-focus: $chunk-color-diamond;
 }
 
 :host([data-size='sm']) {
-  --chunk-button-min-height: 1.75rem;
-  --chunk-button-padding-block: 0.3125rem;
-  --chunk-button-padding-inline: 0.625rem;
-  --chunk-button-font-size: 0.75rem;
+  --chunk-button-min-height: #{$chunk-control-min-height-sm};
+  --chunk-button-padding-block: #{$chunk-control-padding-block-sm};
+  --chunk-button-padding-inline: #{$chunk-control-padding-inline-sm};
+  --chunk-button-font-size: #{$chunk-control-font-size-sm};
   --chunk-button-shadow: #{$chunk-shadow-sm};
   --chunk-button-shadow-active: none;
-  --chunk-button-active-offset: 1px;
+  --chunk-button-active-offset: #{$chunk-control-active-offset-sm};
 }
 
 :host([data-disabled]) {

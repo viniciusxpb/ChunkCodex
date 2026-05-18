@@ -9,16 +9,14 @@ $chunk-panel-focus: $chunk-color-diamond;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-
 }
 
 :host(::before) {
-    content: "";
-    width: 14px;
-    height: 2px;
-    background: var(--chunk-panel-title-text);
-    display: inline-block;
-    margin-right: 8px;
-    margin-bottom: 3px;
+  content: '';
+  width: 14px;
+  height: 2px;
+  background-color: var(--chunk-panel-title-text);
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 3px;
 }
-

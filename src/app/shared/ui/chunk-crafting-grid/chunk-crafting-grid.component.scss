@@ -1,0 +1,39 @@
+@use 'tokens' as *;
+
+:host {
+  --chunk-crafting-grid-cell-size: 3rem;
+  --chunk-crafting-grid-border-width: 2px;
+  --chunk-crafting-grid-border-color: #{$chunk-color-border};
+
+  display: inline-block;
+}
+
+.chunk-crafting-grid__matrix {
+  display: grid;
+  grid-template-columns: repeat(5, var(--chunk-crafting-grid-cell-size));
+  grid-template-rows: repeat(3, var(--chunk-crafting-grid-cell-size));
+  grid-auto-flow: row;
+  border-top: var(--chunk-crafting-grid-border-width) solid var(--chunk-crafting-grid-border-color);
+  border-left: var(--chunk-crafting-grid-border-width) solid var(--chunk-crafting-grid-border-color);
+}
+
+.chunk-crafting-grid__slot {
+  min-width: 0;
+  min-height: 0;
+  border-right: var(--chunk-crafting-grid-border-width) solid
+    var(--chunk-crafting-grid-border-color);
+  border-bottom: var(--chunk-crafting-grid-border-width) solid
+    var(--chunk-crafting-grid-border-color);
+}
+
+.chunk-crafting-grid__slot--result {
+  grid-row: 1 / 4;
+}
+
+.chunk-crafting-grid__slot--result:nth-last-child(2) {
+  grid-column: 4;
+}
+
+.chunk-crafting-grid__slot--result:last-child {
+  grid-column: 5;
+}
