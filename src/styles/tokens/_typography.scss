@@ -7,3 +7,23 @@ $chunk-font-sans:
   sans-serif !default;
 $chunk-font-display: 'VT323', $chunk-font-sans !default;
 $chunk-font-mono: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace !default;
+
+$chunk-font-size-h1: 4rem !default;
+$chunk-font-size-h2: 2.375rem !default;
+$chunk-font-size-h3: 1.5rem !default;
+$chunk-font-size-lead: 1.125rem !default;
+$chunk-font-size-body: 0.9375rem !default;
+$chunk-font-size-sm: 0.8125rem !default;
+$chunk-font-size-xs: 0.75rem !default;
+$chunk-font-size-2xs: 0.6875rem !default;
+$chunk-font-size-control-md: 1rem !default;
+$chunk-font-size-control-sm: $chunk-font-size-xs !default;
+
+$chunk-line-height-h1: 0.95 !default;
+$chunk-line-height-h2: 1 !default;
+$chunk-line-height-h3: 1.1 !default;
+$chunk-line-height-lead: 1.4 !default;
+$chunk-line-height-body: 1.6 !default;
+
+$chunk-letter-spacing-none: 0 !default;
+$chunk-letter-spacing-eyebrow: 0.05em !default;

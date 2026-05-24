@@ -15,7 +15,7 @@
   border: var(--chunk-input-field-border);
   background-color: var(--chunk-input-field-bg);
   color: var(--chunk-input-field-text);
-  font-size: 14px;
+  font-size: $chunk-font-size-sm;
   cursor: var(--chunk-input-field-cursor);
   box-shadow: var(--chunk-input-field-shadow);
   transition:

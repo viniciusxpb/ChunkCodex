@@ -34,8 +34,15 @@ export type ChunkGridElementSize =
   host: {
     class: 'chunk-grid-element',
     '[attr.data-size]': 'size()',
+    '[attr.data-mobile]': 'mobile() ?? null',
+    '[attr.data-desktop]': 'desktop() ?? null',
+    '[style.--chunk-grid-element-size-input]': 'size()',
+    '[style.--chunk-grid-element-mobile-input]': 'mobile() ?? null',
+    '[style.--chunk-grid-element-desktop-input]': 'desktop() ?? null',
   },
 })
 export class ChunkGridElementComponent {
   readonly size = input<ChunkGridElementSize>('1');
+  readonly mobile = input<ChunkGridElementSize>();
+  readonly desktop = input<ChunkGridElementSize>();
 }

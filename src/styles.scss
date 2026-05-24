@@ -7,6 +7,22 @@ body {
   padding: 2rem;
 }
 
+.u-bottom-dashed {
+    border-bottom: 1px dashed $chunk-color-line-soft;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
 code,
 kbd,
 pre,

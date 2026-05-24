@@ -6,7 +6,7 @@ $chunk-panel-focus: $chunk-color-diamond;
 :host {
   --chunk-panel-title-text: #{$chunk-color-ink-3};
   color: var(--chunk-panel-title-text);
-  font-size: 14px;
+  font-size: $chunk-font-size-sm;
   font-weight: 700;
   text-transform: uppercase;
 }

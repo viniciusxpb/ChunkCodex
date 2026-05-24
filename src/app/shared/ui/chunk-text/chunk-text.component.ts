@@ -1,6 +1,15 @@
 import { Component, input } from '@angular/core';
 
-export type ChunkTextType = 'h1' | 'h2' | 'h3' | 'body' | 'lead' | 'small' | 'mono' | 'meta';
+export type ChunkTextType =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'body'
+  | 'lead'
+  | 'small'
+  | 'mono'
+  | 'meta'
+  | 'eyebrow';
 
 @Component({
   selector: 'chunk-text',

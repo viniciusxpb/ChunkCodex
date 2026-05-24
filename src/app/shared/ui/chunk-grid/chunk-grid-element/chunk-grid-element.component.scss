@@ -1,5 +1,10 @@
+@use 'tokens' as *;
+
 :host {
-  --chunk-grid-element-size: 1;
+  --chunk-grid-element-size: var(
+    --chunk-grid-element-desktop-input,
+    var(--chunk-grid-element-size-input, 1)
+  );
 
   display: block;
   min-width: 0;
@@ -8,94 +13,11 @@
   box-sizing: border-box;
 }
 
-:host([data-size='2']) {
-  --chunk-grid-element-size: 2;
-}
-
-:host([data-size='3']) {
-  --chunk-grid-element-size: 3;
-}
-
-:host([data-size='4']) {
-  --chunk-grid-element-size: 4;
-}
-
-:host([data-size='5']) {
-  --chunk-grid-element-size: 5;
-}
-
-:host([data-size='6']) {
-  --chunk-grid-element-size: 6;
-}
-
-:host([data-size='7']) {
-  --chunk-grid-element-size: 7;
-}
-
-:host([data-size='8']) {
-  --chunk-grid-element-size: 8;
-}
-
-:host([data-size='9']) {
-  --chunk-grid-element-size: 9;
-}
-
-:host([data-size='10']) {
-  --chunk-grid-element-size: 10;
-}
-
-:host([data-size='11']) {
-  --chunk-grid-element-size: 11;
-}
-
-:host([data-size='12']) {
-  --chunk-grid-element-size: 12;
-}
-
-:host([data-size='13']) {
-  --chunk-grid-element-size: 13;
-}
-
-:host([data-size='14']) {
-  --chunk-grid-element-size: 14;
-}
-
-:host([data-size='15']) {
-  --chunk-grid-element-size: 15;
-}
-
-:host([data-size='16']) {
-  --chunk-grid-element-size: 16;
-}
-
-:host([data-size='17']) {
-  --chunk-grid-element-size: 17;
-}
-
-:host([data-size='18']) {
-  --chunk-grid-element-size: 18;
-}
-
-:host([data-size='19']) {
-  --chunk-grid-element-size: 19;
-}
-
-:host([data-size='20']) {
-  --chunk-grid-element-size: 20;
-}
-
-:host([data-size='21']) {
-  --chunk-grid-element-size: 21;
-}
-
-:host([data-size='22']) {
-  --chunk-grid-element-size: 22;
-}
-
-:host([data-size='23']) {
-  --chunk-grid-element-size: 23;
-}
-
-:host([data-size='24']) {
-  --chunk-grid-element-size: 24;
+@media (max-width: $chunk-grid-mobile-threshold) {
+  :host {
+    --chunk-grid-element-size: var(
+      --chunk-grid-element-mobile-input,
+      var(--chunk-grid-element-desktop-input, var(--chunk-grid-element-size-input, 1))
+    );
+  }
 }

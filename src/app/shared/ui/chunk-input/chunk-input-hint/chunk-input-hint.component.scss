@@ -5,7 +5,7 @@
 
   display: block;
   color: var(--chunk-input-hint-text);
-  font-size: 12px;
+  font-size: $chunk-font-size-xs;
 }
 
 :host([data-tone='danger']) {

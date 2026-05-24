@@ -22,11 +22,9 @@ $chunk-panel-focus: $chunk-color-diamond;
   --chunk-panel-min-height: 2.5rem;
   --chunk-panel-padding-block: 0.625rem;
   --chunk-panel-padding-inline: 1rem;
-  --chunk-panel-font-size: 1rem;
-  
+  --chunk-panel-font-size: #{$chunk-font-size-control-md};
 
   display: flex;
-  gap: 16px;
   flex-flow: wrap;
   background-color: var(--chunk-panel-tone-bg);
   border: 2px solid var(--chunk-panel-content-border-color);
@@ -37,4 +35,3 @@ $chunk-panel-focus: $chunk-color-diamond;
   outline: 3px solid color.change($chunk-panel-focus, $alpha: 0.45);
   outline-offset: 2px;
 }
-

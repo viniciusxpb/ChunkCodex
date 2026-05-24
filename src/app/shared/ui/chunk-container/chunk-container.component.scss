@@ -26,7 +26,6 @@ $chunk-container-focus: $chunk-color-diamond;
   border: var(--chunk-container-border);
   padding: var(--chunk-container-padding);
   display: flex;
-  gap: 16px;
   flex-flow: wrap;
   background-color: var(--chunk-container-tone-bg);
   box-shadow: var(--chunk-container-shadow);

@@ -1,4 +1,5 @@
 @use 'colors' as *;
+@use 'typography' as *;
 
 $chunk-shadow-sm: 2px 2px 0 $chunk-color-shadow;
 $chunk-shadow-md: 4px 4px 0 $chunk-color-shadow;
@@ -33,8 +34,10 @@ $chunk-control-padding-block-sm: 0.3125rem;
 $chunk-control-padding-inline-md: 1rem;
 $chunk-control-padding-inline-sm: 0.625rem;
 
-$chunk-control-font-size-md: 1rem;
-$chunk-control-font-size-sm: 0.75rem;
+$chunk-control-font-size-md: $chunk-font-size-control-md;
+$chunk-control-font-size-sm: $chunk-font-size-control-sm;
 
 $chunk-control-active-offset-md: 2px;
 $chunk-control-active-offset-sm: 1px;
+
+$chunk-grid-mobile-threshold: 800px !default;
