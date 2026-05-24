@@ -6,7 +6,7 @@ $chunk-color-ink: #1d1610 !default;
 $chunk-color-ink-2: #4a3b26 !default;
 $chunk-color-ink-3: #8a7551 !default;
 $chunk-color-line-soft: #b4a378 !default;
-$chunk-color-white: #FFFFFF !default;
+$chunk-color-white: #ffffff !default;
 
 $chunk-color-grass: #6cc24a !default;
 $chunk-color-grass-dark: #3d7a2a !default;
@@ -32,6 +32,7 @@ $chunk-color-text-subtle: $chunk-color-ink-2 !default;
 $chunk-color-text-muted: $chunk-color-ink-3 !default;
 
 $chunk-color-success: $chunk-color-grass !default;
+$chunk-color-success-text: $chunk-color-grass-dark !default;
 $chunk-color-info: $chunk-color-diamond !default;
 $chunk-color-danger: $chunk-color-redstone !default;
 $chunk-color-warning: $chunk-color-gold !default;

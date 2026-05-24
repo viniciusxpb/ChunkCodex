@@ -9,7 +9,10 @@ export type ChunkTextType =
   | 'small'
   | 'mono'
   | 'meta'
-  | 'eyebrow';
+  | 'eyebrow'
+  | 'stat';
+
+export type ChunkTextTone = 'default' | 'success' | 'danger' | 'muted';
 
 @Component({
   selector: 'chunk-text',
@@ -19,8 +22,10 @@ export type ChunkTextType =
   host: {
     class: 'chunk-text',
     '[attr.data-type]': 'type()',
+    '[attr.data-tone]': 'tone()',
   },
 })
 export class ChunkTextComponent {
   readonly type = input<ChunkTextType>('body');
+  readonly tone = input<ChunkTextTone>('default');
 }

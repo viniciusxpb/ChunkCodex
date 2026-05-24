@@ -66,3 +66,27 @@
   --chunk-text-letter-spacing: #{$chunk-letter-spacing-eyebrow};
   --chunk-text-transform: uppercase;
 }
+
+:host([data-type='stat']) {
+  --chunk-text-color: #{$chunk-color-ink};
+  --chunk-text-font-family: #{$chunk-font-mono};
+  --chunk-text-font-size: #{$chunk-font-size-sm};
+  --chunk-text-line-height: #{$chunk-line-height-compact};
+}
+
+:host([data-type='stat'][data-tone='success'])::before {
+  content: '\2713';
+  margin-right: 0.25rem;
+}
+
+:host([data-tone='success']) {
+  --chunk-text-color: #{$chunk-color-success-text};
+}
+
+:host([data-tone='danger']) {
+  --chunk-text-color: #{$chunk-color-danger-text};
+}
+
+:host([data-tone='muted']) {
+  --chunk-text-color: #{$chunk-color-text-muted};
+}
