@@ -1,9 +1,18 @@
 <div class="chunk-crafting-grid__matrix" aria-label="Crafting grid">
-  @for (slot of craftingSlots; track slot) {
-    <div class="chunk-crafting-grid__slot chunk-crafting-grid__slot--crafting"></div>
+  @for (slot of craftingSlots; track slot; let i = $index) {
+    <div class="chunk-crafting-grid__slot chunk-crafting-grid__slot--crafting">
+      <div class="minha-div"></div>
+      @if (i === 4) {
+        
+      }
+    </div>
   }
 
-  @for (slot of resultSlots; track slot) {
-    <div class="chunk-crafting-grid__slot chunk-crafting-grid__slot--result"></div>
+  @for (slot of resultSlots; track slot; let j = $index) {
+    <div class="chunk-crafting-grid__slot chunk-crafting-grid__slot--result">
+       @if (j === 0) {
+        <div class="crafting_arrow"></div>
+      }
+    </div>
   }
 </div>

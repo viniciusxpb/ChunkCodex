@@ -1,0 +1,69 @@
+@use 'tokens' as *;
+
+:host {
+  --chunk-tag-bg: #{$chunk-color-bg-soft};
+  --chunk-tag-border: #{$chunk-color-ink};
+  --chunk-tag-text: #{$chunk-color-text};
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 1.625rem;
+  padding: 0.25rem 0.625rem;
+  border: 2px solid var(--chunk-tag-border);
+  background-color: var(--chunk-tag-bg);
+  color: var(--chunk-tag-text);
+  font-family: $chunk-font-mono;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: #{$chunk-shadow-sm};
+  box-sizing: border-box;
+}
+
+:host([data-tone='grass']) {
+  --chunk-tag-bg: #{$chunk-color-grass};
+  --chunk-tag-border: #{$chunk-color-grass-dark};
+  --chunk-tag-text: #{$chunk-color-white};
+}
+
+:host([data-tone='lapis']) {
+  --chunk-tag-bg: #{$chunk-color-lapis};
+  --chunk-tag-border: #{$chunk-color-ink};
+  --chunk-tag-text: #{$chunk-color-white};
+}
+
+:host([data-tone='diamond']) {
+  --chunk-tag-bg: #{$chunk-color-diamond};
+  --chunk-tag-border: #{$chunk-color-ink};
+  --chunk-tag-text: #{$chunk-color-ink};
+}
+
+:host([data-tone='gold']) {
+  --chunk-tag-bg: #{$chunk-color-gold};
+  --chunk-tag-border: #{$chunk-color-ink};
+  --chunk-tag-text: #{$chunk-color-ink};
+}
+
+:host([data-tone='redstone']) {
+  --chunk-tag-bg: #{$chunk-color-redstone};
+  --chunk-tag-border: #{$chunk-color-ink};
+  --chunk-tag-text: #{$chunk-color-white};
+}
+
+:host([data-tone='dirt']) {
+  --chunk-tag-bg: #{$chunk-color-dirt};
+  --chunk-tag-border: #{$chunk-color-ink};
+  --chunk-tag-text: #{$chunk-color-white};
+}
+
+:host([data-tone='xp']) {
+  --chunk-tag-bg: #{$chunk-color-xp};
+  --chunk-tag-border: #{$chunk-color-grass-dark};
+  --chunk-tag-text: #{$chunk-color-ink};
+}

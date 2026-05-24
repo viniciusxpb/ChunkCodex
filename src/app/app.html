@@ -1,5 +1,39 @@
 <router-outlet />
 <chunk-container>
+  <chunk-panel>
+    <chunk-panel-title>Texto</chunk-panel-title>
+    <chunk-panel-content>
+      <chunk-text type="h1">Toda receita. Em um bloco.</chunk-text>
+      <chunk-text type="h2">Receitas que produzem isto</chunk-text>
+      <chunk-text type="h3">Notas da comunidade</chunk-text>
+      <chunk-text type="lead">
+        Uma enciclopédia colaborativa de receitas, feita por jogadores.
+      </chunk-text>
+      <chunk-text>
+        A bancada de trabalho é o bloco fundamental para crafts complexos. 4 tábuas de madeira em
+        qualquer arranjo 2x2 do inventário produzem uma bancada, que ao ser colocada no mundo abre o
+        grid completo de 3x3.
+      </chunk-text>
+      <chunk-text type="small">Editado há 3 dias por Mira · v1.20</chunk-text>
+      <chunk-text type="mono">entity.id = "diamond_pickaxe" · hops: 1</chunk-text>
+      <chunk-text type="meta">PROPRIEDADES · STACKABLE · CRAFT 3X3</chunk-text>
+    </chunk-panel-content>
+  </chunk-panel>
+
+  <chunk-panel>
+    <chunk-panel-title>Tags</chunk-panel-title>
+    <chunk-panel-content>
+      <chunk-tag>Stackable</chunk-tag>
+      <chunk-tag tone="grass">Craft 2x2</chunk-tag>
+      <chunk-tag tone="lapis">Craft 3x3</chunk-tag>
+      <chunk-tag tone="diamond">Ferramenta</chunk-tag>
+      <chunk-tag tone="gold">Raro</chunk-tag>
+      <chunk-tag tone="redstone">Automação</chunk-tag>
+      <chunk-tag tone="dirt">Bloco</chunk-tag>
+      <chunk-tag tone="xp">XP</chunk-tag>
+    </chunk-panel-content>
+  </chunk-panel>
+
   <h2>04 · Espaço & Sombra</h2>
   <p>
     Espaçamento é múltiplo de <b>4px</b>. Bordas são <b>2px</b> em chips e tags, <b>3px</b> em
@@ -62,6 +96,15 @@
       <chunk-button size="sm">Small</chunk-button>
       <chunk-button tone="danger" size="sm">Danger Small</chunk-button>
       <chunk-button tone="danger" size="sm" disabled>Disabled</chunk-button>
+    </chunk-panel-content>
+  </chunk-panel>
+</chunk-container>
+
+<chunk-container>
+  <chunk-panel>
+    <chunk-panel-content>
+      <chunk-text type="h3">Propriedades</chunk-text>
+      <chunk-text type="meta">Bloco · STATS TÉCNICOS</chunk-text>
     </chunk-panel-content>
   </chunk-panel>
 </chunk-container>

@@ -5,5 +5,5 @@ $chunk-font-sans:
   BlinkMacSystemFont,
   'Segoe UI',
   sans-serif !default;
-$chunk-font-display: $chunk-font-sans !default;
+$chunk-font-display: 'VT323', $chunk-font-sans !default;
 $chunk-font-mono: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', Consolas, monospace !default;

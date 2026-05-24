@@ -1,0 +1,59 @@
+@use 'tokens' as *;
+
+:host {
+  --chunk-text-color: #{$chunk-color-text};
+  --chunk-text-font-family: #{$chunk-font-sans};
+  --chunk-text-font-size: 15px;
+  --chunk-text-font-weight: 400;
+  --chunk-text-line-height: 1.6;
+  --chunk-text-transform: none;
+  width: 100%;
+
+  display: block;
+  max-width: 100%;
+  color: var(--chunk-text-color);
+  font-family: var(--chunk-text-font-family);
+  font-size: var(--chunk-text-font-size);
+  font-weight: var(--chunk-text-font-weight);
+  line-height: var(--chunk-text-line-height);
+  letter-spacing: 0;
+  text-transform: var(--chunk-text-transform);
+}
+
+:host([data-type='h1']) {
+  --chunk-text-font-family: #{$chunk-font-display};
+  --chunk-text-font-size: 64px;
+  --chunk-text-line-height: 0.95;
+}
+
+:host([data-type='h2']) {
+  --chunk-text-font-family: #{$chunk-font-display};
+  --chunk-text-font-size: 38px;
+  --chunk-text-line-height: 1;
+}
+
+:host([data-type='h3']) {
+  --chunk-text-font-family: #{$chunk-font-display};
+  --chunk-text-font-size: 24px;
+  --chunk-text-line-height: 1.1;
+}
+
+:host([data-type='lead']) {
+  --chunk-text-font-size: 18px;
+  --chunk-text-line-height: 1.4;
+}
+
+:host([data-type='small']) {
+  --chunk-text-font-size: 13px;
+}
+
+:host([data-type='mono']) {
+  --chunk-text-font-family: #{$chunk-font-mono};
+  --chunk-text-font-size: 12px;
+}
+
+:host([data-type='meta']) {
+  --chunk-text-font-family: #{$chunk-font-mono};
+  --chunk-text-font-size: 11px;
+  --chunk-text-transform: uppercase;
+}
