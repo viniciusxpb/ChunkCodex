@@ -4,6 +4,7 @@ import { ChunkButtonComponent } from './shared/ui/chunk-button/chunk-button.comp
 import { ChunkContainerComponent } from './shared/ui/chunk-container/chunk-container.component';
 import { ChunkTagComponent } from './shared/ui/chunk-tag/chunk-tag.component';
 import { ChunkTextComponent } from './shared/ui/chunk-text/chunk-text.component';
+import { CHUNK_GRID_IMPORTS } from './shared/ui/chunk-grid/chunk-grid.imports';
 import { CHUNK_PANEL_IMPORTS } from './shared/ui/chunk-panel/chunk-panel.imports';
 import { CHUNK_INPUT_IMPORTS } from './shared/ui/chunk-input/chunk-input.imports';
 import { ChunkCraftingGridComponent } from './shared/ui/chunk-crafting-grid/chunk-crafting-grid.component';
@@ -14,6 +15,7 @@ import { ChunkCraftingGridComponent } from './shared/ui/chunk-crafting-grid/chun
     RouterOutlet,
     ChunkButtonComponent,
     ChunkContainerComponent,
+    CHUNK_GRID_IMPORTS,
     ChunkTagComponent,
     ChunkTextComponent,
     CHUNK_INPUT_IMPORTS,
