@@ -18,10 +18,10 @@ $chunk-panel-focus: $chunk-color-diamond;
   --chunk-panel-text: var(--chunk-panel-tone-text);
   --chunk-panel-shadow: #{$chunk-shadow-md};
   --chunk-panel-shadow-active: #{$chunk-shadow-sm};
-  --chunk-panel-active-offset: 2px;
-  --chunk-panel-min-height: 2.5rem;
-  --chunk-panel-padding-block: 0.625rem;
-  --chunk-panel-padding-inline: 1rem;
+  --chunk-panel-active-offset: #{$chunk-control-active-offset-md};
+  --chunk-panel-min-height: #{$chunk-control-min-height-md};
+  --chunk-panel-padding-block: #{$chunk-control-padding-block-md};
+  --chunk-panel-padding-inline: #{$chunk-control-padding-inline-md};
   --chunk-panel-font-size: #{$chunk-font-size-control-md};
 
   display: flex;
@@ -33,5 +33,5 @@ $chunk-panel-focus: $chunk-color-diamond;
 
 :host(:focus-visible) {
   outline: 3px solid color.change($chunk-panel-focus, $alpha: 0.45);
-  outline-offset: 2px;
+  outline-offset: $chunk-focus-outline-offset;
 }

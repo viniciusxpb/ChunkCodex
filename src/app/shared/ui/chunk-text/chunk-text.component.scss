@@ -76,7 +76,7 @@
 
 :host([data-type='stat'][data-tone='success'])::before {
   content: '\2713';
-  margin-right: 0.25rem;
+  margin-right: $chunk-text-success-icon-gap;
 }
 
 :host([data-tone='success']) {

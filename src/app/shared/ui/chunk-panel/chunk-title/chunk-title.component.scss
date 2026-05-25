@@ -13,10 +13,10 @@ $chunk-panel-focus: $chunk-color-diamond;
 
 :host(::before) {
   content: '';
-  width: 14px;
-  height: 2px;
+  width: $chunk-panel-title-mark-width;
+  height: $chunk-panel-title-mark-height;
   background-color: var(--chunk-panel-title-text);
   display: inline-block;
-  margin-right: 8px;
-  margin-bottom: 3px;
+  margin-right: $chunk-panel-title-mark-margin-inline-end;
+  margin-bottom: $chunk-panel-title-mark-margin-block-end;
 }

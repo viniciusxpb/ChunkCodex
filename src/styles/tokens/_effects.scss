@@ -13,10 +13,6 @@ $chunk-shadow-danger-sm: 2px 2px 0 $chunk-color-redstone;
 $chunk-shadow-danger-md: 4px 4px 0 $chunk-color-redstone;
 $chunk-shadow-danger-lg: 6px 6px 0 $chunk-color-redstone;
 
-$chunk-padding-sm: 14px;
-$chunk-padding-md: 22px;
-$chunk-padding-lg: 32px;
-
 $chunk-border-sm: 3px solid $chunk-color-shadow;
 $chunk-border-md: 3px solid $chunk-color-shadow;
 $chunk-border-lg: 3px solid $chunk-color-shadow;
@@ -25,19 +21,5 @@ $chunk-border-dashed-sm: 2px dashed $chunk-color-disabled-border;
 $chunk-border-dashed-md: 3px dashed $chunk-color-disabled-border;
 $chunk-border-dashed-lg: 4px dashed $chunk-color-disabled-border;
 
-$chunk-control-min-height-md: 2.5rem;
-$chunk-control-min-height-sm: 1.75rem;
-
-$chunk-control-padding-block-md: 0.625rem;
-$chunk-control-padding-block-sm: 0.3125rem;
-
-$chunk-control-padding-inline-md: 1rem;
-$chunk-control-padding-inline-sm: 0.625rem;
-
 $chunk-control-font-size-md: $chunk-font-size-control-md;
 $chunk-control-font-size-sm: $chunk-font-size-control-sm;
-
-$chunk-control-active-offset-md: 2px;
-$chunk-control-active-offset-sm: 1px;
-
-$chunk-grid-mobile-threshold: 800px !default;

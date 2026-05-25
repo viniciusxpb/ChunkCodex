@@ -7,8 +7,8 @@
   position: relative;
   display: grid;
   place-items: center;
-  width: var(--chunk-crafting-grid-cell-size, 3rem);
-  height: var(--chunk-crafting-grid-cell-size, 3rem);
+  width: var(--chunk-crafting-grid-cell-size, #{$chunk-crafting-grid-cell-size});
+  height: var(--chunk-crafting-grid-cell-size, #{$chunk-crafting-grid-cell-size});
   min-width: 0;
   min-height: 0;
   overflow: hidden;
@@ -41,8 +41,8 @@
 
 .chunk-crafting-grid-item__count {
   position: absolute;
-  right: 0.125rem;
-  bottom: 0.0625rem;
+  right: $chunk-crafting-grid-item-count-inline-end;
+  bottom: $chunk-crafting-grid-item-count-block-end;
   color: $chunk-color-white;
   font-family: $chunk-font-mono;
   font-size: $chunk-font-size-2xs;

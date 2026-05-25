@@ -27,7 +27,7 @@ $chunk-button-focus: $chunk-color-diamond;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: $chunk-button-content-gap;
   min-height: var(--chunk-button-min-height);
   max-width: 100%;
   padding: var(--chunk-button-padding-block) var(--chunk-button-padding-inline);
@@ -68,7 +68,7 @@ $chunk-button-focus: $chunk-color-diamond;
 
 :host(:focus-visible) {
   outline: 3px solid color.change($chunk-button-focus, $alpha: 0.45);
-  outline-offset: 2px;
+  outline-offset: $chunk-focus-outline-offset;
 }
 
 :host([data-variant='ghost']) {

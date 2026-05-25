@@ -37,7 +37,7 @@ $chunk-container-focus: $chunk-color-diamond;
 
 :host(:focus-visible) {
   outline: 3px solid color.change($chunk-container-focus, $alpha: 0.45);
-  outline-offset: 2px;
+  outline-offset: $chunk-focus-outline-offset;
 }
 
 :host([data-padding='sm']) {

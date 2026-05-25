@@ -1,14 +1,14 @@
 @use 'tokens' as *;
 
 :host {
-  --chunk-image-padding: 0.75rem;
+  --chunk-image-padding: #{$chunk-image-padding-md};
   --chunk-image-border: 3px solid #{$chunk-color-ink};
   --chunk-image-bg: #{$chunk-color-bg-paper};
   --chunk-image-shadow: #{$chunk-shadow-sm};
   --chunk-image-fit: contain;
   --chunk-image-aspect-ratio: 1;
   --chunk-image-rendering: auto;
-  --chunk-image-max-inline-size: 14rem;
+  --chunk-image-max-inline-size: #{$chunk-image-max-inline-size-md};
 
   display: grid;
   width: 100%;
@@ -34,19 +34,19 @@
 }
 
 :host([data-padding='sm']) {
-  --chunk-image-padding: 0.5rem;
+  --chunk-image-padding: #{$chunk-image-padding-sm};
 }
 
 :host([data-padding='lg']) {
-  --chunk-image-padding: 1rem;
+  --chunk-image-padding: #{$chunk-image-padding-lg};
 }
 
 :host([data-size='sm']) {
-  --chunk-image-max-inline-size: 8rem;
+  --chunk-image-max-inline-size: #{$chunk-image-max-inline-size-sm};
 }
 
 :host([data-size='lg']) {
-  --chunk-image-max-inline-size: 18rem;
+  --chunk-image-max-inline-size: #{$chunk-image-max-inline-size-lg};
 }
 
 :host([data-size='full']) {

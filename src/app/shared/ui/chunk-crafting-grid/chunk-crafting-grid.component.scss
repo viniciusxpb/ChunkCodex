@@ -1,8 +1,8 @@
 @use 'tokens' as *;
 
 :host {
-  --chunk-crafting-grid-cell-size: 3rem;
-  --chunk-crafting-grid-gap: 4px;
+  --chunk-crafting-grid-cell-size: #{$chunk-crafting-grid-cell-size};
+  --chunk-crafting-grid-gap: #{$chunk-crafting-grid-cell-gap};
   --chunk-crafting-grid-line: #{$chunk-color-shadow};
   --chunk-crafting-grid-empty-bg: #{$chunk-color-bg-grid};
   --chunk-crafting-grid-result-bg: #{$chunk-color-bg-paper};
@@ -10,9 +10,11 @@
   --chunk-crafting-grid-arrow-shadow: #{$chunk-color-shadow};
 
   display: inline-grid;
-  grid-template-columns: max-content 3rem var(--chunk-crafting-grid-cell-size);
+  grid-template-columns: max-content $chunk-crafting-grid-arrow-width var(
+      --chunk-crafting-grid-cell-size
+    );
   align-items: center;
-  gap: 1rem;
+  gap: $chunk-crafting-grid-layout-gap;
   max-width: 100%;
 }
 
@@ -41,11 +43,14 @@
 }
 
 .chunk-crafting-grid__arrow {
-  width: 3rem;
-  height: 2rem;
+  width: $chunk-crafting-grid-arrow-width;
+  height: $chunk-crafting-grid-arrow-height;
   background-color: var(--chunk-crafting-grid-arrow-bg);
   clip-path: polygon(0 34%, 58% 34%, 58% 0, 100% 50%, 58% 100%, 58% 66%, 0 66%);
-  filter: drop-shadow(2px 2px 0 var(--chunk-crafting-grid-arrow-shadow));
+  filter: drop-shadow(
+    $chunk-crafting-grid-arrow-shadow-offset $chunk-crafting-grid-arrow-shadow-offset 0
+      var(--chunk-crafting-grid-arrow-shadow)
+  );
 }
 
 .chunk-crafting-grid__result {
@@ -63,15 +68,17 @@
   background-color: var(--chunk-crafting-grid-empty-bg);
 }
 
-@media (max-width: 420px) {
+@media (max-width: $chunk-crafting-grid-mobile-threshold) {
   :host {
-    --chunk-crafting-grid-cell-size: 2.5rem;
+    --chunk-crafting-grid-cell-size: #{$chunk-crafting-grid-cell-size-sm};
 
-    grid-template-columns: max-content 2.5rem var(--chunk-crafting-grid-cell-size);
-    gap: 0.75rem;
+    grid-template-columns: max-content $chunk-crafting-grid-arrow-width-sm var(
+        --chunk-crafting-grid-cell-size
+      );
+    gap: $chunk-crafting-grid-layout-gap-sm;
   }
 
   .chunk-crafting-grid__arrow {
-    width: 2.5rem;
+    width: $chunk-crafting-grid-arrow-width-sm;
   }
 }

@@ -9,8 +9,8 @@
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  min-height: 1.625rem;
-  padding: 0.25rem 0.625rem;
+  min-height: $chunk-tag-min-height;
+  padding: $chunk-tag-padding-block $chunk-tag-padding-inline;
   border: 2px solid var(--chunk-tag-border);
   background-color: var(--chunk-tag-bg);
   color: var(--chunk-tag-text);

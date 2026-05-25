@@ -1,3 +1,55 @@
 $chunk-gap-sm: 1rem !default;
 $chunk-gap-md: 0.5rem !default;
 $chunk-gap-lg: 1rem !default;
+
+$chunk-padding-sm: 0.875rem !default;
+$chunk-padding-md: 1.375rem !default;
+$chunk-padding-lg: 2rem !default;
+
+$chunk-control-min-height-sm: 1.75rem !default;
+$chunk-control-min-height-md: 2.5rem !default;
+$chunk-control-padding-block-sm: 0.3125rem !default;
+$chunk-control-padding-block-md: 0.625rem !default;
+$chunk-control-padding-inline-sm: 0.625rem !default;
+$chunk-control-padding-inline-md: 1rem !default;
+$chunk-control-active-offset-sm: 0.0625rem !default;
+$chunk-control-active-offset-md: 0.125rem !default;
+$chunk-focus-outline-offset: 0.125rem !default;
+
+$chunk-button-content-gap: $chunk-gap-md !default;
+
+$chunk-grid-mobile-threshold: 50rem !default;
+
+$chunk-image-padding-sm: 0.5rem !default;
+$chunk-image-padding-md: 0.75rem !default;
+$chunk-image-padding-lg: 1rem !default;
+$chunk-image-max-inline-size-sm: 8rem !default;
+$chunk-image-max-inline-size-md: 14rem !default;
+$chunk-image-max-inline-size-lg: 18rem !default;
+
+$chunk-panel-title-mark-width: 0.875rem !default;
+$chunk-panel-title-mark-height: 0.125rem !default;
+$chunk-panel-title-mark-margin-inline-end: 0.5rem !default;
+$chunk-panel-title-mark-margin-block-end: 0.1875rem !default;
+
+$chunk-text-success-icon-gap: 0.25rem !default;
+
+$chunk-tag-min-height: 1.625rem !default;
+$chunk-tag-padding-block: 0.25rem !default;
+$chunk-tag-padding-inline: 0.625rem !default;
+
+$chunk-input-field-padding: 0.5625rem !default;
+
+$chunk-crafting-grid-cell-size: 3rem !default;
+$chunk-crafting-grid-cell-size-sm: 2.5rem !default;
+$chunk-crafting-grid-cell-gap: 0.25rem !default;
+$chunk-crafting-grid-layout-gap: $chunk-gap-lg !default;
+$chunk-crafting-grid-layout-gap-sm: 0.75rem !default;
+$chunk-crafting-grid-arrow-width: 3rem !default;
+$chunk-crafting-grid-arrow-width-sm: 2.5rem !default;
+$chunk-crafting-grid-arrow-height: 2rem !default;
+$chunk-crafting-grid-arrow-shadow-offset: 0.125rem !default;
+$chunk-crafting-grid-mobile-threshold: 26.25rem !default;
+$chunk-crafting-grid-empty-mark-inset: 0.75rem !default;
+$chunk-crafting-grid-item-count-inline-end: 0.125rem !default;
+$chunk-crafting-grid-item-count-block-end: 0.0625rem !default;

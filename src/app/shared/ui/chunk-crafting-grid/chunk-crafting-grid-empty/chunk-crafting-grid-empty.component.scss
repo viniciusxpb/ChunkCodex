@@ -6,8 +6,8 @@
 
   position: relative;
   display: block;
-  width: var(--chunk-crafting-grid-cell-size, 3rem);
-  height: var(--chunk-crafting-grid-cell-size, 3rem);
+  width: var(--chunk-crafting-grid-cell-size, #{$chunk-crafting-grid-cell-size});
+  height: var(--chunk-crafting-grid-cell-size, #{$chunk-crafting-grid-cell-size});
   min-width: 0;
   min-height: 0;
   background-color: var(--chunk-crafting-grid-empty-bg);
@@ -18,7 +18,7 @@
 :host::after {
   content: '';
   position: absolute;
-  inset: 0.75rem;
+  inset: $chunk-crafting-grid-empty-mark-inset;
   border-top: 2px solid var(--chunk-crafting-grid-empty-mark);
   transform-origin: center;
 }

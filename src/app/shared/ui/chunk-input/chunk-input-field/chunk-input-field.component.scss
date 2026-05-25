@@ -11,7 +11,7 @@
 
   display: block;
   width: 100%;
-  padding: 9px;
+  padding: $chunk-input-field-padding;
   border: var(--chunk-input-field-border);
   background-color: var(--chunk-input-field-bg);
   color: var(--chunk-input-field-text);
