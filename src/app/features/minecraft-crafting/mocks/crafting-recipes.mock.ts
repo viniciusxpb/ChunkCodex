@@ -4,14 +4,14 @@ import {
   CraftingRecipeIngredientDto,
   ResourceLocation,
 } from '../models/crafting-recipe.model';
-import { MinecraftItemDto } from '../models/minecraft-item.model';
-import { MINECRAFT_ITEMS_MOCK } from './minecraft-items.mock';
+import { CatalogItemDto } from '../models/catalog-item.model';
+import { CATALOG_ITEMS_MOCK } from './catalog-items.mock';
 
-function getItem(id: ResourceLocation): MinecraftItemDto {
-  const item = MINECRAFT_ITEMS_MOCK.find((candidate) => candidate.id === id);
+function getItem(id: ResourceLocation): CatalogItemDto {
+  const item = CATALOG_ITEMS_MOCK.find((candidate) => candidate.id === id);
 
   if (!item) {
-    throw new Error(`Minecraft item mock not found: ${id}`);
+    throw new Error(`Catalog item mock not found: ${id}`);
   }
 
   return item;

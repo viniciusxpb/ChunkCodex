@@ -1,4 +1,4 @@
-export interface MinecraftAtlasIconDto {
+export interface AtlasIconDto {
   id: string;
   atlasUrl: string;
   x: number;

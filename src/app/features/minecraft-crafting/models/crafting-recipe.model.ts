@@ -3,7 +3,7 @@ import {
   ChunkCraftingGridItem,
   ChunkCraftingGridRecipe,
 } from '../../../shared/ui/chunk-crafting-grid/chunk-crafting-grid.model';
-import { MinecraftItemDto } from './minecraft-item.model';
+import { CatalogItemDto } from './catalog-item.model';
 
 export type ResourceLocation = `${string}:${string}`;
 export type CraftingRecipeType = 'minecraft:crafting_shaped' | 'minecraft:crafting_shapeless';
@@ -11,13 +11,13 @@ export type CraftingRecipeCategory = 'building' | 'equipment' | 'misc' | 'redsto
 export type CraftingItemComponentMap = Readonly<Record<ResourceLocation, unknown>>;
 
 export interface CraftingItemStackDto {
-  readonly item: MinecraftItemDto;
+  readonly item: CatalogItemDto;
   readonly count: number;
   readonly components?: CraftingItemComponentMap;
 }
 
 export interface CraftingRecipeIngredientDto {
-  readonly item?: MinecraftItemDto;
+  readonly item?: CatalogItemDto;
   readonly tag?: ResourceLocation;
   readonly alternatives?: readonly CraftingRecipeIngredientDto[];
 }
@@ -106,7 +106,7 @@ export class CraftingRecipe {
 
   private resolveIngredientItem(
     ingredient: CraftingRecipeIngredientDto | null,
-  ): MinecraftItemDto | null {
+  ): CatalogItemDto | null {
     if (!ingredient) {
       return null;
     }
@@ -118,7 +118,7 @@ export class CraftingRecipe {
     return ingredient.alternatives?.find((alternative) => alternative.item)?.item ?? null;
   }
 
-  private itemToGridItem(item: MinecraftItemDto, count?: number): ChunkCraftingGridItem {
+  private itemToGridItem(item: CatalogItemDto, count?: number): ChunkCraftingGridItem {
     return {
       id: item.id,
       label: item.displayName,
@@ -127,7 +127,7 @@ export class CraftingRecipe {
     };
   }
 
-  private iconToGridIcon(item: MinecraftItemDto): ChunkCraftingGridIcon {
+  private iconToGridIcon(item: CatalogItemDto): ChunkCraftingGridIcon {
     return {
       atlasUrl: item.icon.atlasUrl,
       x: item.icon.x,

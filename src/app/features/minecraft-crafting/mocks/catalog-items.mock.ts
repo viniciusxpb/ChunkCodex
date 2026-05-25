@@ -1,7 +1,7 @@
-import { MinecraftItemDto } from '../models/minecraft-item.model';
-import { MINECRAFT_ICON_ATLAS_MOCK } from './minecraft-icon-atlas.mock';
+import { CatalogItemDto } from '../models/catalog-item.model';
+import { ICON_ATLAS_MOCK } from './icon-atlas.mock';
 
-export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
+export const CATALOG_ITEMS_MOCK: CatalogItemDto[] = [
   {
     id: 'minecraft:diamond',
     namespace: 'minecraft',
@@ -9,7 +9,7 @@ export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
     displayName: 'Diamante',
     type: 'material',
     stackSize: 64,
-    icon: MINECRAFT_ICON_ATLAS_MOCK['minecraft:diamond'],
+    icon: ICON_ATLAS_MOCK['minecraft:diamond'],
   },
   {
     id: 'minecraft:stick',
@@ -18,7 +18,7 @@ export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
     displayName: 'Graveto',
     type: 'material',
     stackSize: 64,
-    icon: MINECRAFT_ICON_ATLAS_MOCK['minecraft:stick'],
+    icon: ICON_ATLAS_MOCK['minecraft:stick'],
   },
   {
     id: 'minecraft:diamond_pickaxe',
@@ -27,7 +27,7 @@ export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
     displayName: 'Picareta de diamante',
     type: 'tool',
     stackSize: 1,
-    icon: MINECRAFT_ICON_ATLAS_MOCK['minecraft:diamond_pickaxe'],
+    icon: ICON_ATLAS_MOCK['minecraft:diamond_pickaxe'],
   },
   {
     id: 'minecraft:iron_ingot',
@@ -36,7 +36,7 @@ export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
     displayName: 'Barra de ferro',
     type: 'material',
     stackSize: 64,
-    icon: MINECRAFT_ICON_ATLAS_MOCK['minecraft:iron_ingot'],
+    icon: ICON_ATLAS_MOCK['minecraft:iron_ingot'],
   },
   {
     id: 'minecraft:gold_ingot',
@@ -45,7 +45,7 @@ export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
     displayName: 'Barra de ouro',
     type: 'material',
     stackSize: 64,
-    icon: MINECRAFT_ICON_ATLAS_MOCK['minecraft:gold_ingot'],
+    icon: ICON_ATLAS_MOCK['minecraft:gold_ingot'],
   },
   {
     id: 'minecraft:coal',
@@ -54,7 +54,7 @@ export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
     displayName: 'Carvao',
     type: 'material',
     stackSize: 64,
-    icon: MINECRAFT_ICON_ATLAS_MOCK['minecraft:coal'],
+    icon: ICON_ATLAS_MOCK['minecraft:coal'],
   },
   {
     id: 'minecraft:oak_planks',
@@ -63,7 +63,7 @@ export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
     displayName: 'Tabuas de carvalho',
     type: 'block',
     stackSize: 64,
-    icon: MINECRAFT_ICON_ATLAS_MOCK['minecraft:oak_planks'],
+    icon: ICON_ATLAS_MOCK['minecraft:oak_planks'],
   },
   {
     id: 'minecraft:crafting_table',
@@ -72,7 +72,7 @@ export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
     displayName: 'Bancada de trabalho',
     type: 'block',
     stackSize: 64,
-    icon: MINECRAFT_ICON_ATLAS_MOCK['minecraft:crafting_table'],
+    icon: ICON_ATLAS_MOCK['minecraft:crafting_table'],
   },
   {
     id: 'minecraft:furnace',
@@ -81,7 +81,7 @@ export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
     displayName: 'Fornalha',
     type: 'block',
     stackSize: 64,
-    icon: MINECRAFT_ICON_ATLAS_MOCK['minecraft:furnace'],
+    icon: ICON_ATLAS_MOCK['minecraft:furnace'],
   },
   {
     id: 'minecraft:apple',
@@ -90,6 +90,6 @@ export const MINECRAFT_ITEMS_MOCK: MinecraftItemDto[] = [
     displayName: 'Maca',
     type: 'food',
     stackSize: 64,
-    icon: MINECRAFT_ICON_ATLAS_MOCK['minecraft:apple'],
+    icon: ICON_ATLAS_MOCK['minecraft:apple'],
   },
 ];

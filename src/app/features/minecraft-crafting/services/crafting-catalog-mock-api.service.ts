@@ -1,28 +1,36 @@
 import { Injectable } from '@angular/core';
 import { delay, Observable, of } from 'rxjs';
+import { CATALOG_ITEMS_MOCK } from '../mocks/catalog-items.mock';
 import { CRAFTING_RECIPES_MOCK } from '../mocks/crafting-recipes.mock';
-import { MINECRAFT_ITEMS_MOCK } from '../mocks/minecraft-items.mock';
+import { ITEM_IMAGES_MOCK } from '../mocks/item-images.mock';
 import {
   CraftingItemStackDto,
   CraftingRecipeDto,
   CraftingRecipeIngredientDto,
 } from '../models/crafting-recipe.model';
-import { MinecraftItemDto } from '../models/minecraft-item.model';
+import { CatalogItemDto } from '../models/catalog-item.model';
+import { ItemImageDto } from '../models/item-image.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class MinecraftMockApiService {
+export class CraftingCatalogMockApiService {
   private readonly latencyMs = 250;
 
-  getItems(): Observable<MinecraftItemDto[]> {
-    return of(MINECRAFT_ITEMS_MOCK.map((item) => this.cloneItem(item))).pipe(delay(this.latencyMs));
+  getItems(): Observable<CatalogItemDto[]> {
+    return of(CATALOG_ITEMS_MOCK.map((item) => this.cloneItem(item))).pipe(delay(this.latencyMs));
   }
 
-  getItemById(id: string): Observable<MinecraftItemDto | null> {
-    const item = MINECRAFT_ITEMS_MOCK.find((candidate) => candidate.id === id);
+  getItemById(id: string): Observable<CatalogItemDto | null> {
+    const item = CATALOG_ITEMS_MOCK.find((candidate) => candidate.id === id);
 
     return of(item ? this.cloneItem(item) : null).pipe(delay(this.latencyMs));
+  }
+
+  getItemImageById(id: string): Observable<ItemImageDto | null> {
+    const image = ITEM_IMAGES_MOCK[id];
+
+    return of(image ? this.cloneItemImage(image) : null).pipe(delay(this.latencyMs));
   }
 
   getCraftingRecipes(): Observable<CraftingRecipeDto[]> {
@@ -39,13 +47,17 @@ export class MinecraftMockApiService {
     return of(recipe ? this.cloneCraftingRecipe(recipe) : null).pipe(delay(this.latencyMs));
   }
 
-  private cloneItem(item: MinecraftItemDto): MinecraftItemDto {
+  private cloneItem(item: CatalogItemDto): CatalogItemDto {
     return {
       ...item,
       icon: {
         ...item.icon,
       },
     };
+  }
+
+  private cloneItemImage(image: ItemImageDto): ItemImageDto {
+    return { ...image };
   }
 
   private cloneCraftingRecipe(recipe: CraftingRecipeDto): CraftingRecipeDto {

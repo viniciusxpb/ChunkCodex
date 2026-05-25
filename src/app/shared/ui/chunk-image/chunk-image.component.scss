@@ -1,0 +1,80 @@
+@use 'tokens' as *;
+
+:host {
+  --chunk-image-padding: 0.75rem;
+  --chunk-image-border: 3px solid #{$chunk-color-ink};
+  --chunk-image-bg: #{$chunk-color-bg-paper};
+  --chunk-image-shadow: #{$chunk-shadow-sm};
+  --chunk-image-fit: contain;
+  --chunk-image-aspect-ratio: 1;
+  --chunk-image-rendering: auto;
+  --chunk-image-max-inline-size: 14rem;
+
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  padding: var(--chunk-image-padding);
+  place-items: center;
+  border: var(--chunk-image-border);
+  overflow: hidden;
+  background-color: var(--chunk-image-bg);
+  box-shadow: var(--chunk-image-shadow);
+  box-sizing: border-box;
+}
+
+:host(:not([data-framed])) {
+  --chunk-image-padding: 0;
+  --chunk-image-border: 0;
+  --chunk-image-bg: transparent;
+  --chunk-image-shadow: none;
+}
+
+:host([data-padding='none']) {
+  --chunk-image-padding: 0;
+}
+
+:host([data-padding='sm']) {
+  --chunk-image-padding: 0.5rem;
+}
+
+:host([data-padding='lg']) {
+  --chunk-image-padding: 1rem;
+}
+
+:host([data-size='sm']) {
+  --chunk-image-max-inline-size: 8rem;
+}
+
+:host([data-size='lg']) {
+  --chunk-image-max-inline-size: 18rem;
+}
+
+:host([data-size='full']) {
+  --chunk-image-max-inline-size: 100%;
+}
+
+:host([data-fit='cover']) {
+  --chunk-image-fit: cover;
+}
+
+:host([data-aspect='auto']) {
+  --chunk-image-aspect-ratio: auto;
+}
+
+:host([data-aspect='wide']) {
+  --chunk-image-aspect-ratio: 16 / 9;
+}
+
+:host([data-rendering='pixelated']) {
+  --chunk-image-rendering: pixelated;
+}
+
+.chunk-image__media {
+  display: block;
+  width: 100%;
+  max-width: var(--chunk-image-max-inline-size);
+  height: auto;
+  aspect-ratio: var(--chunk-image-aspect-ratio);
+  object-fit: var(--chunk-image-fit);
+  image-rendering: var(--chunk-image-rendering);
+}
