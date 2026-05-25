@@ -1,0 +1,86 @@
+@use 'tokens' as *;
+
+:host {
+  --item-icon-grid-icon-frame-size: 3.5rem;
+  --item-icon-grid-icon-scale: 3;
+
+  display: block;
+  width: 100%;
+}
+
+.item-icon-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+.item-icon-grid__state {
+  color: $chunk-color-text-muted;
+  font-family: $chunk-font-mono;
+  font-size: $chunk-font-size-xs;
+}
+
+.item-icon-grid__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.item-icon-grid__item {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 2px solid $chunk-color-line-soft;
+  background-color: $chunk-color-bg-soft;
+  box-sizing: border-box;
+}
+
+.item-icon-grid__icon-frame {
+  display: grid;
+  flex: 0 0 auto;
+  width: var(--item-icon-grid-icon-frame-size);
+  height: var(--item-icon-grid-icon-frame-size);
+  overflow: hidden;
+  place-items: center;
+  border: 2px solid $chunk-color-ink;
+  background-color: $chunk-color-bg-paper;
+}
+
+.item-icon-grid__icon {
+  flex: 0 0 auto;
+  background-size: 512px auto;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  transform: scale(var(--item-icon-grid-icon-scale));
+  transform-origin: center;
+}
+
+.item-icon-grid__copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.125rem;
+}
+
+.item-icon-grid__name {
+  overflow: hidden;
+  color: $chunk-color-text;
+  font-size: $chunk-font-size-sm;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-icon-grid__id {
+  overflow: hidden;
+  color: $chunk-color-text-muted;
+  font-family: $chunk-font-mono;
+  font-size: $chunk-font-size-2xs;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

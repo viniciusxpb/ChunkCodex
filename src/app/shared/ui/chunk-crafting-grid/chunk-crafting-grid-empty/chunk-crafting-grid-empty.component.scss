@@ -1,0 +1,32 @@
+@use 'tokens' as *;
+
+:host {
+  --chunk-crafting-grid-empty-bg: #{$chunk-color-bg-grid};
+  --chunk-crafting-grid-empty-mark: #{$chunk-color-line-soft};
+
+  position: relative;
+  display: block;
+  width: var(--chunk-crafting-grid-cell-size, 3rem);
+  height: var(--chunk-crafting-grid-cell-size, 3rem);
+  min-width: 0;
+  min-height: 0;
+  background-color: var(--chunk-crafting-grid-empty-bg);
+  box-sizing: border-box;
+}
+
+:host::before,
+:host::after {
+  content: '';
+  position: absolute;
+  inset: 0.75rem;
+  border-top: 2px solid var(--chunk-crafting-grid-empty-mark);
+  transform-origin: center;
+}
+
+:host::before {
+  transform: rotate(45deg);
+}
+
+:host::after {
+  transform: rotate(-45deg);
+}

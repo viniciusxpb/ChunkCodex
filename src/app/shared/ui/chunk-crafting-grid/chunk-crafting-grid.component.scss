@@ -2,44 +2,76 @@
 
 :host {
   --chunk-crafting-grid-cell-size: 3rem;
-  --chunk-crafting-grid-border-width: 2px;
-  --chunk-crafting-grid-border-color: #{$chunk-color-border};
+  --chunk-crafting-grid-gap: 4px;
+  --chunk-crafting-grid-line: #{$chunk-color-shadow};
+  --chunk-crafting-grid-empty-bg: #{$chunk-color-bg-grid};
+  --chunk-crafting-grid-result-bg: #{$chunk-color-bg-paper};
+  --chunk-crafting-grid-arrow-bg: #{$chunk-color-lapis};
+  --chunk-crafting-grid-arrow-shadow: #{$chunk-color-shadow};
 
-  display: inline-block;
-
-  .crafting_arrow{
-    background-color: red;
-    width: 50px;
-    height: 50px;
-  }
+  display: inline-grid;
+  grid-template-columns: max-content 3rem var(--chunk-crafting-grid-cell-size);
+  align-items: center;
+  gap: 1rem;
+  max-width: 100%;
 }
 
 .chunk-crafting-grid__matrix {
   display: grid;
-  grid-template-columns: repeat(5, var(--chunk-crafting-grid-cell-size));
+  grid-template-columns: repeat(3, var(--chunk-crafting-grid-cell-size));
   grid-template-rows: repeat(3, var(--chunk-crafting-grid-cell-size));
-  grid-auto-flow: row;
-  border-top: var(--chunk-crafting-grid-border-width) solid var(--chunk-crafting-grid-border-color);
-  border-left: var(--chunk-crafting-grid-border-width) solid var(--chunk-crafting-grid-border-color);
+  gap: var(--chunk-crafting-grid-gap);
+  background-color: var(--chunk-crafting-grid-empty-bg);
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      transparent 0 var(--chunk-crafting-grid-cell-size),
+      var(--chunk-crafting-grid-line) var(--chunk-crafting-grid-cell-size)
+        calc(var(--chunk-crafting-grid-cell-size) + var(--chunk-crafting-grid-gap))
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 var(--chunk-crafting-grid-cell-size),
+      var(--chunk-crafting-grid-line) var(--chunk-crafting-grid-cell-size)
+        calc(var(--chunk-crafting-grid-cell-size) + var(--chunk-crafting-grid-gap))
+    );
+  border: var(--chunk-crafting-grid-gap) solid var(--chunk-crafting-grid-line);
+  box-shadow: #{$chunk-shadow-md};
+  box-sizing: content-box;
 }
 
-.chunk-crafting-grid__slot {
-  min-width: 0;
-  min-height: 0;
-  border-right: var(--chunk-crafting-grid-border-width) solid
-    var(--chunk-crafting-grid-border-color);
-  border-bottom: var(--chunk-crafting-grid-border-width) solid
-    var(--chunk-crafting-grid-border-color);
+.chunk-crafting-grid__arrow {
+  width: 3rem;
+  height: 2rem;
+  background-color: var(--chunk-crafting-grid-arrow-bg);
+  clip-path: polygon(0 34%, 58% 34%, 58% 0, 100% 50%, 58% 100%, 58% 66%, 0 66%);
+  filter: drop-shadow(2px 2px 0 var(--chunk-crafting-grid-arrow-shadow));
 }
 
-.chunk-crafting-grid__slot--result {
-  grid-row: 1 / 4;
+.chunk-crafting-grid__result {
+  display: grid;
+  place-items: center;
+  width: var(--chunk-crafting-grid-cell-size);
+  height: var(--chunk-crafting-grid-cell-size);
+  background-color: var(--chunk-crafting-grid-result-bg);
+  border: 3px solid var(--chunk-crafting-grid-line);
+  box-shadow: #{$chunk-shadow-md};
+  box-sizing: border-box;
 }
 
-.chunk-crafting-grid__slot--result:nth-last-child(2) {
-  grid-column: 4;
+.chunk-crafting-grid__result:empty {
+  background-color: var(--chunk-crafting-grid-empty-bg);
 }
 
-.chunk-crafting-grid__slot--result:last-child {
-  grid-column: 5;
+@media (max-width: 420px) {
+  :host {
+    --chunk-crafting-grid-cell-size: 2.5rem;
+
+    grid-template-columns: max-content 2.5rem var(--chunk-crafting-grid-cell-size);
+    gap: 0.75rem;
+  }
+
+  .chunk-crafting-grid__arrow {
+    width: 2.5rem;
+  }
 }

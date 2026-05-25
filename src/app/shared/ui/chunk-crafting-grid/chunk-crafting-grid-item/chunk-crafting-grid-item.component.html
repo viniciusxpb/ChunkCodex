@@ -1,0 +1,15 @@
+@if (item().icon; as icon) {
+  <span
+    class="chunk-crafting-grid-item__icon"
+    [style.width.px]="icon.width"
+    [style.height.px]="icon.height"
+    [style.background-image]="'url(' + icon.atlasUrl + ')'"
+    [style.background-position]="-icon.x + 'px ' + -icon.y + 'px'"
+  ></span>
+} @else {
+  <span class="chunk-crafting-grid-item__fallback">{{ item().label.charAt(0) }}</span>
+}
+
+@if (item().count && item().count !== 1) {
+  <span class="chunk-crafting-grid-item__count">{{ item().count }}</span>
+}

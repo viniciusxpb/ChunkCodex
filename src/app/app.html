@@ -40,6 +40,13 @@
   </chunk-grid>
 
   <chunk-panel>
+    <chunk-panel-title>Atlas mock</chunk-panel-title>
+    <chunk-panel-content>
+      <minecraft-item-icon-grid />
+    </chunk-panel-content>
+  </chunk-panel>
+
+  <chunk-panel>
     <chunk-panel-title>Tags</chunk-panel-title>
     <chunk-panel-content>
       <chunk-tag>Stackable</chunk-tag>
@@ -60,7 +67,7 @@
     empilhado".
   </p>
 
-  <chunk-crafting-grid></chunk-crafting-grid>
+  <chunk-crafting-grid [recipe]="diamondPickaxeRecipe"></chunk-crafting-grid>
 
   <chunk-panel>
     <chunk-input>

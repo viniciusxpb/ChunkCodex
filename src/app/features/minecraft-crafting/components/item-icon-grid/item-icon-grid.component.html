@@ -1,0 +1,28 @@
+<section class="item-icon-grid">
+  @if (items$ | async; as items) {
+    @if (items.length === 0) {
+      <p class="item-icon-grid__state">Nenhum item encontrado.</p>
+    } @else {
+      <div class="item-icon-grid__items">
+        <article class="item-icon-grid__item" *ngFor="let item of items; trackBy: trackByItemId">
+          <div class="item-icon-grid__icon-frame">
+            <div
+              class="item-icon-grid__icon"
+              [style.width.px]="item.icon.width"
+              [style.height.px]="item.icon.height"
+              [style.background-image]="'url(' + item.icon.atlasUrl + ')'"
+              [style.background-position]="-item.icon.x + 'px ' + -item.icon.y + 'px'"
+            ></div>
+          </div>
+
+          <div class="item-icon-grid__copy">
+            <strong class="item-icon-grid__name">{{ item.displayName }}</strong>
+            <span class="item-icon-grid__id">{{ item.id }}</span>
+          </div>
+        </article>
+      </div>
+    }
+  } @else {
+    <p class="item-icon-grid__state">Carregando itens...</p>
+  }
+</section>
