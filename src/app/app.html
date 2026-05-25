@@ -1,9 +1,9 @@
 <router-outlet />
 <chunk-container>
-  <chunk-grid>
+  <chunk-grid gap="sm">
     <chunk-grid-element size="24">
       <chunk-container>
-        <chunk-grid>
+        <chunk-grid gap="sm">
           <chunk-grid-element size="8" mobile="24">
             @if (itemImage(); as image) {
               <chunk-image size="lg" rendering="pixelated" [image]="image" />

@@ -1,6 +1,8 @@
+@use 'tokens' as *;
+
 :host {
   --chunk-grid-columns: 24;
-  --chunk-grid-gap: 4px;
+  --chunk-grid-gap: 0;
 
   display: grid;
   width: 100%;
@@ -10,4 +12,16 @@
   grid-auto-rows: minmax(0, auto);
   gap: var(--chunk-grid-gap);
   box-sizing: border-box;
+}
+
+:host([data-gap='sm']) {
+  --chunk-grid-gap: #{$chunk-gap-sm};
+}
+
+:host([data-gap='md']) {
+  --chunk-grid-gap: #{$chunk-gap-md};
+}
+
+:host([data-gap='lg']) {
+  --chunk-grid-gap: #{$chunk-gap-lg};
 }

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+
+export type ChunkGridGap = 'sm' | 'md' | 'lg';
 
 @Component({
   selector: 'chunk-grid',
@@ -7,6 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './chunk-grid.component.scss',
   host: {
     class: 'chunk-grid',
+    '[attr.data-gap]': 'gap() ?? null',
   },
 })
-export class ChunkGridComponent {}
+export class ChunkGridComponent {
+  readonly gap = input<ChunkGridGap>();
+}
