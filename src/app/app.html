@@ -6,7 +6,7 @@
         <chunk-grid gap="sm">
           <chunk-grid-element size="8" mobile="24">
             @if (itemImage(); as image) {
-              <chunk-image size="lg" rendering="pixelated" [image]="image" />
+            <chunk-image size="lg" rendering="pixelated" [image]="image" />
             }
           </chunk-grid-element>
 
@@ -41,12 +41,27 @@
               <chunk-grid-element class="u-bottom-dashed u-text-right" size="12">
                 <chunk-text type="stat" tone="success"> sim </chunk-text>
               </chunk-grid-element>
+
+              <chunk-grid-element size="24" class="u-mt-sm">
+                <div class="u-tags-list">
+                  <chunk-tag>!Not Stackable</chunk-tag>
+                  <chunk-tag tone="lapis">Craft 3x3</chunk-tag>
+                </div>
+
+              </chunk-grid-element>
+
             </chunk-grid>
           </chunk-grid-element>
         </chunk-grid>
       </chunk-container>
     </chunk-grid-element>
-    <chunk-grid-element size="14"> </chunk-grid-element>
+    <chunk-grid-element size="14">
+      <chunk-container>
+        <chunk-text type="h3">Receita · Cama Vermelha</chunk-text>
+        <chunk-crafting-grid class="u-mt-sm" />
+      </chunk-container>
+
+    </chunk-grid-element>
     <chunk-grid-element size="10">
       <chunk-container>
         <chunk-text type="h3">Propriedades</chunk-text>

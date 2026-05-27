@@ -23,6 +23,17 @@ body {
   text-align: right;
 }
 
+.u-mt-sm {
+  margin-top: $chunk-margin-sm;
+}
+
+//TODO: padronizar
+.u-tags-list{
+  display: flex;
+  gap: $chunk-gap-sm;
+  flex-flow: wrap;
+}
+
 code,
 kbd,
 pre,
