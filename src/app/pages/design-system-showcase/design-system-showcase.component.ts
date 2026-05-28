@@ -6,31 +6,10 @@ import {
   CraftingRecipe,
   ItemIconGridComponent,
 } from '@app/features/minecraft-crafting';
-import {
-  CHUNK_CRAFTING_GRID_IMPORTS,
-  CHUNK_GRID_IMPORTS,
-  CHUNK_INPUT_IMPORTS,
-  CHUNK_PANEL_IMPORTS,
-  ChunkButtonComponent,
-  ChunkContainerComponent,
-  ChunkImageComponent,
-  ChunkTagComponent,
-  ChunkTextComponent,
-} from '@app/shared/ui';
+import { CHUNK_SHARED_UI_IMPORTS } from '@app/shared/ui';
 
 @Component({
-  imports: [
-    ItemIconGridComponent,
-    ChunkButtonComponent,
-    ChunkContainerComponent,
-    ChunkImageComponent,
-    CHUNK_GRID_IMPORTS,
-    ChunkTagComponent,
-    ChunkTextComponent,
-    CHUNK_INPUT_IMPORTS,
-    CHUNK_PANEL_IMPORTS,
-    CHUNK_CRAFTING_GRID_IMPORTS,
-  ],
+  imports: [ItemIconGridComponent, CHUNK_SHARED_UI_IMPORTS],
   templateUrl: './design-system-showcase.component.html',
   styleUrl: './design-system-showcase.component.scss',
 })
