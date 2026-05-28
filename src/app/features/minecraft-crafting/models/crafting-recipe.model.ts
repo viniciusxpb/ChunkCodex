@@ -2,7 +2,7 @@ import {
   ChunkCraftingGridIcon,
   ChunkCraftingGridItem,
   ChunkCraftingGridRecipe,
-} from '../../../shared/ui/chunk-crafting-grid/chunk-crafting-grid.model';
+} from '@app/shared/ui';
 import { CatalogItemDto } from './catalog-item.model';
 
 export type ResourceLocation = `${string}:${string}`;

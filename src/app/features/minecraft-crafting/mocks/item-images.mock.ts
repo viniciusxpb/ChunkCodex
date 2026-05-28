@@ -1,4 +1,4 @@
-import { ItemImageDto } from '../models/item-image.model';
+import { ItemImageDto } from '../models';
 
 export const ITEM_IMAGES_MOCK: Record<string, ItemImageDto> = {
   'white-bed': {

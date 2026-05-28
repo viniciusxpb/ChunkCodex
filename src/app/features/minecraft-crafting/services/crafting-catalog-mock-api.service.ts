@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
 import { delay, Observable, of } from 'rxjs';
-import { CATALOG_ITEMS_MOCK } from '../mocks/catalog-items.mock';
-import { CRAFTING_RECIPES_MOCK } from '../mocks/crafting-recipes.mock';
-import { ITEM_IMAGES_MOCK } from '../mocks/item-images.mock';
+import { CATALOG_ITEMS_MOCK, CRAFTING_RECIPES_MOCK, ITEM_IMAGES_MOCK } from '../mocks';
 import {
+  CatalogItemDto,
   CraftingItemStackDto,
   CraftingRecipeDto,
   CraftingRecipeIngredientDto,
-} from '../models/crafting-recipe.model';
-import { CatalogItemDto } from '../models/catalog-item.model';
-import { ItemImageDto } from '../models/item-image.model';
+  ItemImageDto,
+} from '../models';
 
 @Injectable({
   providedIn: 'root',

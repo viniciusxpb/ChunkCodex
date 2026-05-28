@@ -1,4 +1,4 @@
-import { CatalogItemDto } from '../models/catalog-item.model';
+import { CatalogItemDto } from '../models';
 import { ICON_ATLAS_MOCK } from './icon-atlas.mock';
 
 export const CATALOG_ITEMS_MOCK: CatalogItemDto[] = [

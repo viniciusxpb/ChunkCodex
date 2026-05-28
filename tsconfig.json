@@ -12,6 +12,13 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app/layout": ["src/app/layout/index.ts"],
+      "@app/shared/ui": ["src/app/shared/ui/index.ts"],
+      "@app/features/*": ["src/app/features/*/index.ts"],
+      "@app/*": ["src/app/*"]
+    },
     "target": "ES2022",
     "module": "preserve"
   },

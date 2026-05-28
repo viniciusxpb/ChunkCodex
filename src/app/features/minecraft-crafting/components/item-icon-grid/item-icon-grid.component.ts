@@ -1,7 +1,7 @@
 import { AsyncPipe, NgFor } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { CatalogItemDto } from '../../models/catalog-item.model';
-import { CraftingCatalogMockApiService } from '../../services/crafting-catalog-mock-api.service';
+import { CatalogItemDto } from '../../models';
+import { CraftingCatalogMockApiService } from '../../services';
 
 @Component({
   selector: 'minecraft-item-icon-grid',

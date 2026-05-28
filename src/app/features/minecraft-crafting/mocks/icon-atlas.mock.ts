@@ -1,4 +1,4 @@
-import { AtlasIconDto } from '../models/atlas-icon.model';
+import { AtlasIconDto } from '../models';
 
 const ICON_ATLAS_URL = 'assets/mock/minecraft/icons-atlas.png';
 const ICON_SIZE = 16;

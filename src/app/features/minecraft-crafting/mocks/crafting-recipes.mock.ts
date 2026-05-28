@@ -1,10 +1,10 @@
 import {
+  CatalogItemDto,
   CraftingItemStackDto,
   CraftingRecipeDto,
   CraftingRecipeIngredientDto,
   ResourceLocation,
-} from '../models/crafting-recipe.model';
-import { CatalogItemDto } from '../models/catalog-item.model';
+} from '../models';
 import { CATALOG_ITEMS_MOCK } from './catalog-items.mock';
 
 function getItem(id: ResourceLocation): CatalogItemDto {
@@ -42,11 +42,11 @@ export const CRAFTING_RECIPES_MOCK: Record<string, CraftingRecipeDto> = {
     },
     result: stack('minecraft:diamond_pickaxe'),
   },
-    'minecraft:bed': {
+  'minecraft:bed': {
     id: 'minecraft:bed',
     type: 'minecraft:crafting_shaped',
     category: 'building',
-    pattern: [' ', 'WWW','PPP'],
+    pattern: [' ', 'WWW', 'PPP'],
     key: {
       P: ingredient('minecraft:oak_planks'),
       W: ingredient('minecraft:white_wool'),
