@@ -66,6 +66,15 @@ export const CATALOG_ITEMS_MOCK: CatalogItemDto[] = [
     icon: ICON_ATLAS_MOCK['minecraft:oak_planks'],
   },
   {
+    id: 'minecraft:white_wool',
+    namespace: 'minecraft',
+    name: 'white_wool',
+    displayName: 'La branca',
+    type: 'block',
+    stackSize: 64,
+    icon: ICON_ATLAS_MOCK['minecraft:white_wool'],
+  },
+  {
     id: 'minecraft:crafting_table',
     namespace: 'minecraft',
     name: 'crafting_table',

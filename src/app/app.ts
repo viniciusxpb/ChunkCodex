@@ -43,4 +43,8 @@ export class App {
   protected readonly diamondPickaxeRecipe = new CraftingRecipe(
     CRAFTING_RECIPES_MOCK['minecraft:diamond_pickaxe'],
   ).toChunkCraftingGridRecipe();
+
+    protected readonly bedRecipe = new CraftingRecipe(
+    CRAFTING_RECIPES_MOCK['minecraft:bed'],
+  ).toChunkCraftingGridRecipe();
 }

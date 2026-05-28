@@ -42,6 +42,17 @@ export const CRAFTING_RECIPES_MOCK: Record<string, CraftingRecipeDto> = {
     },
     result: stack('minecraft:diamond_pickaxe'),
   },
+    'minecraft:bed': {
+    id: 'minecraft:bed',
+    type: 'minecraft:crafting_shaped',
+    category: 'building',
+    pattern: [' ', 'WWW','PPP'],
+    key: {
+      P: ingredient('minecraft:oak_planks'),
+      W: ingredient('minecraft:white_wool'),
+    },
+    result: stack('minecraft:crafting_table'),
+  },
   'minecraft:crafting_table': {
     id: 'minecraft:crafting_table',
     type: 'minecraft:crafting_shaped',

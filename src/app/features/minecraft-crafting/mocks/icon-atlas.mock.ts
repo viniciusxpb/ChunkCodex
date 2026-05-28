@@ -60,6 +60,14 @@ export const ICON_ATLAS_MOCK: Record<string, AtlasIconDto> = {
     width: ICON_SIZE,
     height: ICON_SIZE,
   },
+  'minecraft:white_wool': {
+    id: 'minecraft:white_wool',
+    atlasUrl: ICON_ATLAS_URL,
+    x: 272,
+    y: 112,
+    width: ICON_SIZE,
+    height: ICON_SIZE,
+  },
   'minecraft:crafting_table': {
     id: 'minecraft:crafting_table',
     atlasUrl: ICON_ATLAS_URL,
